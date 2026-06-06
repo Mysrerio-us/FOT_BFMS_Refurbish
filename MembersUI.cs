@@ -10,14 +10,29 @@ using System.Windows.Forms;
 
 namespace FOT_BFMS
 {
-    public partial class Login : Form
+    public partial class MembersUI : Form
     {
-        public Login()
+        public MembersUI()
         {
             InitializeComponent();
         }
 
         private void roundControl1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roundControl2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
