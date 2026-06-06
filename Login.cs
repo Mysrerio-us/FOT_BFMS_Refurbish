@@ -68,5 +68,25 @@ namespace FOT_BFMS
         {
             
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roundControl6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void roundControl6_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void roundControl6_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
