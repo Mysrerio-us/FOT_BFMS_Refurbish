@@ -1,1 +1,17 @@
+# Visual Studio
 .vs/
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build Results
+bin/
+obj/
+
+# NuGet Packages
+packages/
+
+# User-specific settings
+*.suo
+*.user
+*.userprefs

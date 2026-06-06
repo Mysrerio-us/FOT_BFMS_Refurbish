@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.roundControl1 = new FOT_BFMS.RoundControl();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -42,21 +42,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // groupBox2
+            // roundControl1
             // 
-            this.groupBox2.Location = new System.Drawing.Point(797, 148);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(300, 419);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.roundControl1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.roundControl1.BackgroundColor = System.Drawing.SystemColors.ButtonShadow;
+            this.roundControl1.BorderColor = System.Drawing.SystemColors.Control;
+            this.roundControl1.BorderWidth = 1F;
+            this.roundControl1.Location = new System.Drawing.Point(772, 111);
+            this.roundControl1.Name = "roundControl1";
+            this.roundControl1.Radius = 10;
+            this.roundControl1.Size = new System.Drawing.Size(302, 355);
+            this.roundControl1.TabIndex = 1;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 628);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.roundControl1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
@@ -69,7 +72,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private RoundControl roundControl1;
     }
 }
 
