@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,10 +50,89 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.picBell = new System.Windows.Forms.PictureBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.pnlChart = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label23 = new System.Windows.Forms.Label();
+            this.pnlActivities = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pnlContributors = new System.Windows.Forms.Panel();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.dgvContributors = new System.Windows.Forms.DataGridView();
+            this.colRank = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnlPending = new System.Windows.Forms.Panel();
+            this.label28 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.button11 = new System.Windows.Forms.Button();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.label31 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlHelp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBell)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.pnlChart.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.pnlActivities.SuspendLayout();
+            this.pnlContributors.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContributors)).BeginInit();
+            this.pnlPending.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -328,11 +410,677 @@
             this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button10.UseVisualStyleBackColor = true;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.picBell);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Location = new System.Drawing.Point(240, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1126, 85);
+            this.panel2.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(3, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(335, 31);
+            this.label5.TabIndex = 0;
+            this.label5.Text = " ☰  Good Morning, Admin 👋";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(42, 43);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(458, 21);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Welcome back! Here\'s what\'s happening with your batch fund.";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(931, 9);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(969, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(61, 21);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Admin";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Franklin Gothic Medium", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(970, 30);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(137, 17);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Super Administrator  ▼";
+            // 
+            // picBell
+            // 
+            this.picBell.Image = ((System.Drawing.Image)(resources.GetObject("picBell.Image")));
+            this.picBell.Location = new System.Drawing.Point(872, 14);
+            this.picBell.Name = "picBell";
+            this.picBell.Size = new System.Drawing.Size(24, 24);
+            this.picBell.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBell.TabIndex = 5;
+            this.picBell.TabStop = false;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = " MMMM d, yyyy | dddd";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(801, 55);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(306, 27);
+            this.dateTimePicker1.TabIndex = 6;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.pictureBox4);
+            this.panel3.Location = new System.Drawing.Point(263, 110);
+            this.panel3.Margin = new System.Windows.Forms.Padding(10);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(230, 130);
+            this.panel3.TabIndex = 2;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.label14);
+            this.panel4.Controls.Add(this.label13);
+            this.panel4.Controls.Add(this.label12);
+            this.panel4.Controls.Add(this.pictureBox5);
+            this.panel4.Location = new System.Drawing.Point(530, 110);
+            this.panel4.Margin = new System.Windows.Forms.Padding(10);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(230, 130);
+            this.panel4.TabIndex = 3;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.label18);
+            this.panel5.Controls.Add(this.label17);
+            this.panel5.Controls.Add(this.pictureBox6);
+            this.panel5.Controls.Add(this.label16);
+            this.panel5.Controls.Add(this.label15);
+            this.panel5.Location = new System.Drawing.Point(804, 110);
+            this.panel5.Margin = new System.Windows.Forms.Padding(10);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(230, 130);
+            this.panel5.TabIndex = 4;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Controls.Add(this.label21);
+            this.panel6.Controls.Add(this.label20);
+            this.panel6.Controls.Add(this.label19);
+            this.panel6.Controls.Add(this.pictureBox7);
+            this.panel6.Location = new System.Drawing.Point(1079, 110);
+            this.panel6.Margin = new System.Windows.Forms.Padding(10);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(230, 130);
+            this.panel6.TabIndex = 5;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(14, 15);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(68, 15);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(138, 28);
+            this.label9.TabIndex = 1;
+            this.label9.Text = " Central Fund";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(65, 49);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(159, 38);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Rs 184,500";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label11.Location = new System.Drawing.Point(105, 98);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(71, 21);
+            this.label11.TabIndex = 3;
+            this.label11.Text = " +12.4%";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(16, 15);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox5.TabIndex = 1;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(69, 15);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(141, 28);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "Admin Wallet";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(67, 49);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(143, 38);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "Rs 24,750";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Franklin Gothic Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(80, 98);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(121, 17);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "Personal Balance";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(92, 15);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(100, 28);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "Members";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(113, 49);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(49, 38);
+            this.label16.TabIndex = 4;
+            this.label16.Text = "34";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(22, 15);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox6.TabIndex = 5;
+            this.pictureBox6.TabStop = false;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Franklin Gothic Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(94, 98);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(103, 17);
+            this.label17.TabIndex = 6;
+            this.label17.Text = "Total Members";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.LightGreen;
+            this.label18.Font = new System.Drawing.Font("Franklin Gothic Medium", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(168, 63);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(53, 17);
+            this.label18.TabIndex = 7;
+            this.label18.Text = " +3 new\n";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(14, 15);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox7.TabIndex = 6;
+            this.pictureBox7.TabStop = false;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(59, 15);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(168, 28);
+            this.label19.TabIndex = 7;
+            this.label19.Text = "Monthly Growth";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(85, 49);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(97, 38);
+            this.label20.TabIndex = 8;
+            this.label20.Text = "18.2%\n";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label21.Location = new System.Drawing.Point(71, 98);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(120, 21);
+            this.label21.TabIndex = 9;
+            this.label21.Text = "vs last month ↗";
+            // 
+            // pnlChart
+            // 
+            this.pnlChart.BackColor = System.Drawing.Color.White;
+            this.pnlChart.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlChart.Controls.Add(this.label23);
+            this.pnlChart.Controls.Add(this.chart1);
+            this.pnlChart.Controls.Add(this.label22);
+            this.pnlChart.Location = new System.Drawing.Point(263, 264);
+            this.pnlChart.Name = "pnlChart";
+            this.pnlChart.Size = new System.Drawing.Size(650, 213);
+            this.pnlChart.TabIndex = 6;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(10, 11);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(192, 23);
+            this.label22.TabIndex = 3;
+            this.label22.Text = " Monthly Fund Growth";
+            // 
+            // chart1
+            // 
+            this.chart1.BorderlineWidth = 3;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(13, 40);
+            this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.MarkerSize = 8;
+            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(632, 168);
+            this.chart1.TabIndex = 4;
+            this.chart1.Text = "chart1";
+            this.chart1.Click += new System.EventHandler(this.chart1_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Franklin Gothic Medium", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(559, 12);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(61, 17);
+            this.label23.TabIndex = 5;
+            this.label23.Text = "This Year ";
+            // 
+            // pnlActivities
+            // 
+            this.pnlActivities.BackColor = System.Drawing.Color.White;
+            this.pnlActivities.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlActivities.Controls.Add(this.listView1);
+            this.pnlActivities.Controls.Add(this.label25);
+            this.pnlActivities.Controls.Add(this.label24);
+            this.pnlActivities.Location = new System.Drawing.Point(263, 494);
+            this.pnlActivities.Name = "pnlActivities";
+            this.pnlActivities.Size = new System.Drawing.Size(350, 215);
+            this.pnlActivities.TabIndex = 7;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(3, 8);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(148, 23);
+            this.label24.TabIndex = 2;
+            this.label24.Text = " Recent Activities";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label25.Location = new System.Drawing.Point(282, 12);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(63, 17);
+            this.label25.TabIndex = 3;
+            this.label25.Text = " View All";
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.listView1.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(7, 47);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(330, 161);
+            this.listView1.TabIndex = 4;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Activity";
+            this.columnHeader1.Width = 240;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Time";
+            this.columnHeader2.Width = 80;
+            // 
+            // pnlContributors
+            // 
+            this.pnlContributors.BackColor = System.Drawing.Color.White;
+            this.pnlContributors.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlContributors.Controls.Add(this.dgvContributors);
+            this.pnlContributors.Controls.Add(this.label27);
+            this.pnlContributors.Controls.Add(this.label26);
+            this.pnlContributors.ForeColor = System.Drawing.Color.Black;
+            this.pnlContributors.Location = new System.Drawing.Point(639, 494);
+            this.pnlContributors.Name = "pnlContributors";
+            this.pnlContributors.Size = new System.Drawing.Size(307, 215);
+            this.pnlContributors.TabIndex = 8;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(12, 8);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(117, 17);
+            this.label26.TabIndex = 3;
+            this.label26.Text = " Top Contributors";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label27.Location = new System.Drawing.Point(239, 12);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(63, 17);
+            this.label27.TabIndex = 4;
+            this.label27.Text = " View All";
+            // 
+            // dgvContributors
+            // 
+            this.dgvContributors.AllowUserToAddRows = false;
+            this.dgvContributors.AllowUserToDeleteRows = false;
+            this.dgvContributors.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvContributors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvContributors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colRank,
+            this.colName,
+            this.colAmount});
+            this.dgvContributors.Location = new System.Drawing.Point(15, 43);
+            this.dgvContributors.Name = "dgvContributors";
+            this.dgvContributors.ReadOnly = true;
+            this.dgvContributors.RowHeadersVisible = false;
+            this.dgvContributors.RowHeadersWidth = 51;
+            this.dgvContributors.RowTemplate.Height = 24;
+            this.dgvContributors.Size = new System.Drawing.Size(287, 150);
+            this.dgvContributors.TabIndex = 5;
+            // 
+            // colRank
+            // 
+            this.colRank.HeaderText = "Rank";
+            this.colRank.MinimumWidth = 6;
+            this.colRank.Name = "colRank";
+            this.colRank.ReadOnly = true;
+            // 
+            // colName
+            // 
+            this.colName.HeaderText = "Name";
+            this.colName.MinimumWidth = 6;
+            this.colName.Name = "colName";
+            this.colName.ReadOnly = true;
+            // 
+            // colAmount
+            // 
+            this.colAmount.HeaderText = "Amount";
+            this.colAmount.MinimumWidth = 6;
+            this.colAmount.Name = "colAmount";
+            this.colAmount.ReadOnly = true;
+            // 
+            // pnlPending
+            // 
+            this.pnlPending.BackColor = System.Drawing.Color.White;
+            this.pnlPending.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlPending.Controls.Add(this.pictureBox9);
+            this.pnlPending.Controls.Add(this.button11);
+            this.pnlPending.Controls.Add(this.label30);
+            this.pnlPending.Controls.Add(this.label29);
+            this.pnlPending.Controls.Add(this.pictureBox8);
+            this.pnlPending.Controls.Add(this.label28);
+            this.pnlPending.Location = new System.Drawing.Point(956, 494);
+            this.pnlPending.Name = "pnlPending";
+            this.pnlPending.Size = new System.Drawing.Size(380, 89);
+            this.pnlPending.TabIndex = 9;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(28, 3);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(151, 23);
+            this.label28.TabIndex = 8;
+            this.label28.Text = "Pending Requests";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(3, 7);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox8.TabIndex = 9;
+            this.pictureBox8.TabStop = false;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.Orange;
+            this.label29.Location = new System.Drawing.Point(-1, 26);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(49, 38);
+            this.label29.TabIndex = 10;
+            this.label29.Text = "12";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Franklin Gothic Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.Gray;
+            this.label30.Location = new System.Drawing.Point(3, 64);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(125, 17);
+            this.label30.TabIndex = 11;
+            this.label30.Text = "Requests Pending";
+            // 
+            // button11
+            // 
+            this.button11.FlatAppearance.BorderColor = System.Drawing.Color.Orange;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Franklin Gothic Medium", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.ForeColor = System.Drawing.Color.Orange;
+            this.button11.Location = new System.Drawing.Point(166, 40);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(129, 23);
+            this.button11.TabIndex = 12;
+            this.button11.Text = "View All Requests";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(317, 14);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(58, 56);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 13;
+            this.pictureBox9.TabStop = false;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.label31);
+            this.panel7.Controls.Add(this.button15);
+            this.panel7.Controls.Add(this.button14);
+            this.panel7.Controls.Add(this.button13);
+            this.panel7.Controls.Add(this.button12);
+            this.panel7.ForeColor = System.Drawing.Color.Black;
+            this.panel7.Location = new System.Drawing.Point(956, 589);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(380, 120);
+            this.panel7.TabIndex = 10;
+            // 
+            // button12
+            // 
+            this.button12.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Font = new System.Drawing.Font("Franklin Gothic Medium", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(26)))), ((int)(((byte)(59)))));
+            this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
+            this.button12.Location = new System.Drawing.Point(6, 27);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(147, 33);
+            this.button12.TabIndex = 0;
+            this.button12.Text = "  Deposit Fund";
+            this.button12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            this.button13.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Franklin Gothic Medium", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(26)))), ((int)(((byte)(59)))));
+            this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
+            this.button13.Location = new System.Drawing.Point(197, 27);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(147, 33);
+            this.button13.TabIndex = 1;
+            this.button13.Text = "  Withdraw Fund";
+            this.button13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // button14
+            // 
+            this.button14.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Font = new System.Drawing.Font("Franklin Gothic Medium", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(26)))), ((int)(((byte)(59)))));
+            this.button14.Image = ((System.Drawing.Image)(resources.GetObject("button14.Image")));
+            this.button14.Location = new System.Drawing.Point(6, 78);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(147, 33);
+            this.button14.TabIndex = 2;
+            this.button14.Text = "   Add Member";
+            this.button14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button14.UseVisualStyleBackColor = true;
+            // 
+            // button15
+            // 
+            this.button15.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.Font = new System.Drawing.Font("Franklin Gothic Medium", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(26)))), ((int)(((byte)(59)))));
+            this.button15.Image = ((System.Drawing.Image)(resources.GetObject("button15.Image")));
+            this.button15.Location = new System.Drawing.Point(197, 77);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(147, 33);
+            this.button15.TabIndex = 3;
+            this.button15.Text = "   Generate Report\n";
+            this.button15.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button15.UseVisualStyleBackColor = true;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Franklin Gothic Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(7, 3);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(100, 17);
+            this.label31.TabIndex = 11;
+            this.label31.Text = " Quick Actions\n";
+            // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1348, 721);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.pnlPending);
+            this.Controls.Add(this.pnlContributors);
+            this.Controls.Add(this.pnlActivities);
+            this.Controls.Add(this.pnlChart);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -341,12 +1089,43 @@
             this.Name = "AdminDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminDashboard";
+            this.Load += new System.EventHandler(this.AdminDashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlHelp.ResumeLayout(false);
             this.pnlHelp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBell)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.pnlChart.ResumeLayout(false);
+            this.pnlChart.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.pnlActivities.ResumeLayout(false);
+            this.pnlActivities.PerformLayout();
+            this.pnlContributors.ResumeLayout(false);
+            this.pnlContributors.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContributors)).EndInit();
+            this.pnlPending.ResumeLayout(false);
+            this.pnlPending.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -371,5 +1150,64 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox picBell;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Panel pnlChart;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Panel pnlActivities;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.Panel pnlContributors;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.DataGridView dgvContributors;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colRank;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAmount;
+        private System.Windows.Forms.Panel pnlPending;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Button button15;
     }
 }
