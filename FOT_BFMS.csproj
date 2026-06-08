@@ -108,5 +108,11 @@
   <ItemGroup>
     <None Include="Resources\logout %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Elegantthemes-Beautiful-Flat-Profile.512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

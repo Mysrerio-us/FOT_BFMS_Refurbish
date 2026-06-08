@@ -51,5 +51,35 @@ namespace FOT_BFMS
         {
 
         }
+
+        private void roundControl2_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roundControl5_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roundControl2_Load_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
