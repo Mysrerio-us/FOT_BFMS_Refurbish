@@ -36,9 +36,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelLogin = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
@@ -51,7 +51,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.roundControl7 = new FOT_BFMS.RoundControl();
-            this.roundControl5 = new FOT_BFMS.RoundControl();
+            this.roundControlLogin = new FOT_BFMS.RoundControl();
             this.roundControl4 = new FOT_BFMS.RoundControl();
             this.roundControl2 = new FOT_BFMS.RoundControl();
             this.roundControl3 = new FOT_BFMS.RoundControl();
@@ -140,18 +140,18 @@
             this.linkLabel1.Text = "Forgot Password?";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // label5
+            // labelLogin
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(144)))), ((int)(((byte)(191)))));
-            this.label5.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(833, 461);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 24);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Log In";
-            this.label5.Click += new System.EventHandler(this.label5_Click_1);
+            this.labelLogin.AutoSize = true;
+            this.labelLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(144)))), ((int)(((byte)(191)))));
+            this.labelLogin.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogin.ForeColor = System.Drawing.Color.White;
+            this.labelLogin.Location = new System.Drawing.Point(833, 461);
+            this.labelLogin.Name = "labelLogin";
+            this.labelLogin.Size = new System.Drawing.Size(65, 24);
+            this.labelLogin.TabIndex = 14;
+            this.labelLogin.Text = "Log In";
+            this.labelLogin.Click += new System.EventHandler(this.label5_Click_1);
             // 
             // label6
             // 
@@ -165,15 +165,16 @@
             this.label6.TabIndex = 15;
             this.label6.Text = "Version 0.1 | © All Rights Reserved ";
             // 
-            // textBox1
+            // textBoxUsername
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(226)))), ((int)(((byte)(217)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(717, 248);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(234, 21);
-            this.textBox1.TabIndex = 16;
+            this.textBoxUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(226)))), ((int)(((byte)(217)))));
+            this.textBoxUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxUsername.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUsername.Location = new System.Drawing.Point(717, 248);
+            this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.Size = new System.Drawing.Size(234, 21);
+            this.textBoxUsername.TabIndex = 16;
+            this.textBoxUsername.TextChanged += new System.EventHandler(this.textBoxUsername_TextChanged);
             // 
             // panel1
             // 
@@ -200,6 +201,7 @@
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(234, 21);
             this.textBoxPassword.TabIndex = 19;
+            this.textBoxPassword.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
             // 
             // pictureBoxEyeClose
             // 
@@ -319,18 +321,19 @@
             this.roundControl7.Size = new System.Drawing.Size(180, 381);
             this.roundControl7.TabIndex = 29;
             // 
-            // roundControl5
+            // roundControlLogin
             // 
-            this.roundControl5.BackColor = System.Drawing.Color.White;
-            this.roundControl5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(144)))), ((int)(((byte)(191)))));
-            this.roundControl5.BorderColor = System.Drawing.SystemColors.Control;
-            this.roundControl5.BorderWidth = 1F;
-            this.roundControl5.Location = new System.Drawing.Point(681, 439);
-            this.roundControl5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.roundControl5.Name = "roundControl5";
-            this.roundControl5.Radius = 10;
-            this.roundControl5.Size = new System.Drawing.Size(352, 66);
-            this.roundControl5.TabIndex = 13;
+            this.roundControlLogin.BackColor = System.Drawing.Color.White;
+            this.roundControlLogin.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(144)))), ((int)(((byte)(191)))));
+            this.roundControlLogin.BorderColor = System.Drawing.SystemColors.Control;
+            this.roundControlLogin.BorderWidth = 1F;
+            this.roundControlLogin.Location = new System.Drawing.Point(681, 439);
+            this.roundControlLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.roundControlLogin.Name = "roundControlLogin";
+            this.roundControlLogin.Radius = 10;
+            this.roundControlLogin.Size = new System.Drawing.Size(352, 66);
+            this.roundControlLogin.TabIndex = 13;
+            this.roundControlLogin.Click += new System.EventHandler(this.roundControlLogin_Click);
             // 
             // roundControl4
             // 
@@ -422,10 +425,10 @@
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.roundControl5);
+            this.Controls.Add(this.labelLogin);
+            this.Controls.Add(this.roundControlLogin);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.roundControl4);
@@ -463,10 +466,10 @@
         private RoundControl roundControl4;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private RoundControl roundControl5;
-        private System.Windows.Forms.Label label5;
+        private RoundControl roundControlLogin;
+        private System.Windows.Forms.Label labelLogin;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox textBoxPassword;

@@ -19,6 +19,20 @@ namespace FOT_BFMS
             textBoxPassword.PasswordChar = '*';
             pictureBoxEyeClose.Visible = true;
             pictureBoxEyeOpen.Visible = false;
+            makeDull();
+            
+        }
+        private void makeDull()
+        {
+            roundControlLogin.BackgroundColor = Color.FromArgb(230, 226, 217);
+            labelLogin.BackColor = Color.FromArgb(230, 226, 217);
+            labelLogin.ForeColor = Color.Black;
+        }
+        private void makeBright()
+        {
+            roundControlLogin.BackgroundColor = Color.FromArgb(9, 144, 191);
+            labelLogin.BackColor = Color.FromArgb(9, 144, 191);
+            labelLogin.ForeColor = Color.White;
         }
 
         private void roundControl3_Load(object sender, EventArgs e)
@@ -136,6 +150,36 @@ namespace FOT_BFMS
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             
+        }
+
+
+        private void roundControlLogin_Click(object sender, EventArgs e)
+        {
+            
+        }
+        private void loginButonCheck()
+        {
+            if(string.IsNullOrEmpty(textBoxUsername.Text) || string.IsNullOrEmpty(textBoxPassword.Text))
+            {
+                roundControlLogin.Enabled = false;
+                makeDull();
+            }
+            else
+            {
+                roundControlLogin.Enabled = true;
+                makeBright();
+            }
+        }
+
+
+        private void textBoxPassword_TextChanged(object sender, EventArgs e)
+        {
+            loginButonCheck();
+        }
+
+        private void textBoxUsername_TextChanged(object sender, EventArgs e)
+        {
+            loginButonCheck();
         }
     }
 }
