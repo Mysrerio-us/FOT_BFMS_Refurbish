@@ -79,40 +79,34 @@ namespace FOT_BFMS
             chart1.Legends.Clear();
 
 
-            listView1.Items.Add(
-new ListViewItem(new string[]
-{
-    "SK deposited Rs 5000",
-    "Today"
-}));
-
-            listView1.Items.Add(
-            new ListViewItem(new string[]
-            {
-    "Admin withdrew Rs 3000",
-    "Today"
-            }));
-
-            listView1.Items.Add(
-            new ListViewItem(new string[]
-            {
-    "John Silva joined the batch",
-    "Yesterday"
-            }));
-
-            listView1.Items.Add(
-            new ListViewItem(new string[]
-            {
-    "Nimali deposited Rs 2500",
-    "Yesterday"
-            }));
-
+            
             dgvContributors.Rows.Add("1", "SK Fernando", "45000");
             dgvContributors.Rows.Add("2", "John Perera", "38000");
             dgvContributors.Rows.Add("3", "Alex Kumar", "30000");
             dgvContributors.Rows.Add("4", "Nimali Silva", "25000");
             dgvContributors.Rows.Add("5", "Dinuka Rajapaksa", "18500");
+
+
+            dgvActivities.Rows.Add(
+"SK deposited Rs 5,000 to central fund",
+"Today, 10:30 AM");
+
+            dgvActivities.Rows.Add(
+            "Admin withdrew Rs 3,000 for event expenses",
+            "Today, 09:15 AM");
+
+            dgvActivities.Rows.Add(
+            "New member John Silva joined the batch",
+            "Yesterday, 04:45 PM");
+
+            dgvActivities.Rows.Add(
+            "Nimali deposited Rs 2,500 to central fund",
+            "Yesterday, 02:20 PM");
         }
 
+        private void label34_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

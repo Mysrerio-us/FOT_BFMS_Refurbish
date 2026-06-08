@@ -86,9 +86,6 @@
             this.pnlActivities = new System.Windows.Forms.Panel();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnlContributors = new System.Windows.Forms.Panel();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
@@ -109,6 +106,17 @@
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.label31 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.dgvActivities = new System.Windows.Forms.DataGridView();
+            this.colActivity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlHelp.SuspendLayout();
@@ -133,6 +141,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActivities)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -506,7 +517,7 @@
             this.panel3.Location = new System.Drawing.Point(263, 110);
             this.panel3.Margin = new System.Windows.Forms.Padding(10);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(230, 130);
+            this.panel3.Size = new System.Drawing.Size(233, 130);
             this.panel3.TabIndex = 2;
             // 
             // panel4
@@ -516,7 +527,7 @@
             this.panel4.Controls.Add(this.label13);
             this.panel4.Controls.Add(this.label12);
             this.panel4.Controls.Add(this.pictureBox5);
-            this.panel4.Location = new System.Drawing.Point(530, 110);
+            this.panel4.Location = new System.Drawing.Point(549, 110);
             this.panel4.Margin = new System.Windows.Forms.Padding(10);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(230, 130);
@@ -530,7 +541,7 @@
             this.panel5.Controls.Add(this.pictureBox6);
             this.panel5.Controls.Add(this.label16);
             this.panel5.Controls.Add(this.label15);
-            this.panel5.Location = new System.Drawing.Point(804, 110);
+            this.panel5.Location = new System.Drawing.Point(826, 110);
             this.panel5.Margin = new System.Windows.Forms.Padding(10);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(230, 130);
@@ -543,7 +554,7 @@
             this.panel6.Controls.Add(this.label20);
             this.panel6.Controls.Add(this.label19);
             this.panel6.Controls.Add(this.pictureBox7);
-            this.panel6.Location = new System.Drawing.Point(1079, 110);
+            this.panel6.Location = new System.Drawing.Point(1106, 110);
             this.panel6.Margin = new System.Windows.Forms.Padding(10);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(230, 130);
@@ -775,7 +786,7 @@
             // 
             this.pnlActivities.BackColor = System.Drawing.Color.White;
             this.pnlActivities.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlActivities.Controls.Add(this.listView1);
+            this.pnlActivities.Controls.Add(this.dgvActivities);
             this.pnlActivities.Controls.Add(this.label25);
             this.pnlActivities.Controls.Add(this.label24);
             this.pnlActivities.Location = new System.Drawing.Point(263, 494);
@@ -803,30 +814,6 @@
             this.label25.Size = new System.Drawing.Size(63, 17);
             this.label25.TabIndex = 3;
             this.label25.Text = " View All";
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2});
-            this.listView1.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(7, 47);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(330, 161);
-            this.listView1.TabIndex = 4;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Activity";
-            this.columnHeader1.Width = 240;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Time";
-            this.columnHeader2.Width = 80;
             // 
             // pnlContributors
             // 
@@ -872,13 +859,13 @@
             this.colRank,
             this.colName,
             this.colAmount});
-            this.dgvContributors.Location = new System.Drawing.Point(15, 43);
+            this.dgvContributors.Location = new System.Drawing.Point(3, 43);
             this.dgvContributors.Name = "dgvContributors";
             this.dgvContributors.ReadOnly = true;
             this.dgvContributors.RowHeadersVisible = false;
             this.dgvContributors.RowHeadersWidth = 51;
             this.dgvContributors.RowTemplate.Height = 24;
-            this.dgvContributors.Size = new System.Drawing.Size(287, 150);
+            this.dgvContributors.Size = new System.Drawing.Size(299, 150);
             this.dgvContributors.TabIndex = 5;
             // 
             // colRank
@@ -1066,11 +1053,133 @@
             this.label31.TabIndex = 11;
             this.label31.Text = " Quick Actions\n";
             // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.progressBar1);
+            this.panel8.Controls.Add(this.label36);
+            this.panel8.Controls.Add(this.label35);
+            this.panel8.Controls.Add(this.label34);
+            this.panel8.Controls.Add(this.label33);
+            this.panel8.Controls.Add(this.label32);
+            this.panel8.Controls.Add(this.pictureBox10);
+            this.panel8.Location = new System.Drawing.Point(952, 264);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(384, 213);
+            this.panel8.TabIndex = 11;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(10, 3);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 0;
+            this.pictureBox10.TabStop = false;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(76, 3);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(215, 28);
+            this.label32.TabIndex = 8;
+            this.label32.Text = " Batch Trip Fund Goal\n";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Franklin Gothic Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(80, 53);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(103, 17);
+            this.label33.TabIndex = 9;
+            this.label33.Text = "Target Amount";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(76, 78);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(107, 25);
+            this.label34.TabIndex = 10;
+            this.label34.Text = " Rs 500,000";
+            this.label34.Click += new System.EventHandler(this.label34_Click);
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Franklin Gothic Medium", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(80, 119);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(110, 17);
+            this.label35.TabIndex = 11;
+            this.label35.Text = "Current Amount";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label36.Location = new System.Drawing.Point(76, 140);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(107, 25);
+            this.label36.TabIndex = 12;
+            this.label36.Text = " Rs 184,500\n";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.progressBar1.Location = new System.Drawing.Point(14, 168);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(339, 23);
+            this.progressBar1.TabIndex = 13;
+            this.progressBar1.Value = 37;
+            // 
+            // dgvActivities
+            // 
+            this.dgvActivities.AllowUserToAddRows = false;
+            this.dgvActivities.AllowUserToDeleteRows = false;
+            this.dgvActivities.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvActivities.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvActivities.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colActivity,
+            this.colDate});
+            this.dgvActivities.Location = new System.Drawing.Point(3, 43);
+            this.dgvActivities.MultiSelect = false;
+            this.dgvActivities.Name = "dgvActivities";
+            this.dgvActivities.ReadOnly = true;
+            this.dgvActivities.RowHeadersVisible = false;
+            this.dgvActivities.RowHeadersWidth = 51;
+            this.dgvActivities.RowTemplate.Height = 24;
+            this.dgvActivities.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvActivities.Size = new System.Drawing.Size(342, 150);
+            this.dgvActivities.TabIndex = 6;
+            // 
+            // colActivity
+            // 
+            this.colActivity.HeaderText = "Activity";
+            this.colActivity.MinimumWidth = 6;
+            this.colActivity.Name = "colActivity";
+            this.colActivity.ReadOnly = true;
+            // 
+            // colDate
+            // 
+            this.colDate.HeaderText = " Date";
+            this.colDate.MinimumWidth = 6;
+            this.colDate.Name = "colDate";
+            this.colDate.ReadOnly = true;
+            // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1348, 721);
+            this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.pnlPending);
             this.Controls.Add(this.pnlContributors);
@@ -1126,6 +1235,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActivities)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1184,11 +1297,8 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Panel pnlActivities;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Panel pnlContributors;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label26;
@@ -1209,5 +1319,16 @@
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.DataGridView dgvActivities;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colActivity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDate;
     }
 }
