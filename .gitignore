@@ -13,6 +13,4 @@ packages/
 
 # User-specific settings
 *.suo
-*.user
-*.userprefs
 *.userprefs
