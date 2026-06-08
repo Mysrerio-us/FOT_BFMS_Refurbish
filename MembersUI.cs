@@ -96,5 +96,11 @@ namespace FOT_BFMS
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DepositMoneyUI depositWindow = new DepositMoneyUI();
+            depositWindow.ShowDialog();
+        }
     }
 }

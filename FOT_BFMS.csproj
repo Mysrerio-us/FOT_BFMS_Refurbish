@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DepositMoneyUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepositMoneyUI.Designer.cs">
+      <DependentUpon>DepositMoneyUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Extensions\GraphicsExtension.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -67,6 +73,9 @@
     <Compile Include="RoundControl.Designer.cs">
       <DependentUpon>RoundControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DepositMoneyUI.resx">
+      <DependentUpon>DepositMoneyUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
