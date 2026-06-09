@@ -39,6 +39,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.roundControl3 = new FOT_BFMS.RoundControl();
+            this.roundControl1 = new FOT_BFMS.RoundControl();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -56,6 +58,10 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
@@ -66,12 +72,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.roundControl3 = new FOT_BFMS.RoundControl();
-            this.roundControl1 = new FOT_BFMS.RoundControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -84,12 +84,12 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -128,7 +128,7 @@
             this.label4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label4.Font = new System.Drawing.Font("Baskerville Old Face", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(1213, 28);
+            this.label4.Location = new System.Drawing.Point(1186, 28);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(137, 31);
             this.label4.TabIndex = 11;
@@ -206,6 +206,38 @@
             this.label1.Size = new System.Drawing.Size(121, 38);
             this.label1.TabIndex = 4;
             this.label1.Text = "BFMS";
+            // 
+            // roundControl3
+            // 
+            this.roundControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.roundControl3.AutoScroll = true;
+            this.roundControl3.AutoSize = true;
+            this.roundControl3.BackColor = System.Drawing.Color.Navy;
+            this.roundControl3.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.roundControl3.BorderColor = System.Drawing.SystemColors.Control;
+            this.roundControl3.BorderWidth = 1F;
+            this.roundControl3.ForeColor = System.Drawing.Color.Transparent;
+            this.roundControl3.Location = new System.Drawing.Point(1110, 8);
+            this.roundControl3.Margin = new System.Windows.Forms.Padding(2);
+            this.roundControl3.Name = "roundControl3";
+            this.roundControl3.Radius = 10;
+            this.roundControl3.Size = new System.Drawing.Size(298, 69);
+            this.roundControl3.TabIndex = 2;
+            // 
+            // roundControl1
+            // 
+            this.roundControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.roundControl1.AutoScroll = true;
+            this.roundControl1.BackColor = System.Drawing.Color.Navy;
+            this.roundControl1.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.roundControl1.BorderColor = System.Drawing.SystemColors.Control;
+            this.roundControl1.BorderWidth = 1F;
+            this.roundControl1.Location = new System.Drawing.Point(1044, 8);
+            this.roundControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.roundControl1.Name = "roundControl1";
+            this.roundControl1.Radius = 10;
+            this.roundControl1.Size = new System.Drawing.Size(62, 69);
+            this.roundControl1.TabIndex = 3;
             // 
             // label2
             // 
@@ -424,6 +456,56 @@
             this.panel2.Size = new System.Drawing.Size(477, 227);
             this.panel2.TabIndex = 0;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.Image = global::FOT_BFMS.Properties.Resources.banking__1_;
+            this.pictureBox4.Location = new System.Drawing.Point(348, 70);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(85, 74);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 18;
+            this.pictureBox4.TabStop = false;
+            // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.BackColor = System.Drawing.Color.White;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button5.Location = new System.Drawing.Point(12, 182);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(115, 34);
+            this.button5.TabIndex = 17;
+            this.button5.Text = "→View Only";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // label19
+            // 
+            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label19.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Blue;
+            this.label19.Location = new System.Drawing.Point(12, 73);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(313, 73);
+            this.label19.TabIndex = 16;
+            this.label19.Text = "Rs.184,500";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Blue;
+            this.label7.Location = new System.Drawing.Point(9, 14);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(223, 20);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "⁌  TOTAL BATCH FUND";
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -546,88 +628,6 @@
             this.label5.TabIndex = 16;
             this.label5.Text = "PRIMARY ACTIONS";
             // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Blue;
-            this.label7.Location = new System.Drawing.Point(9, 14);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(223, 20);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "⁌  TOTAL BATCH FUND";
-            // 
-            // label19
-            // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label19.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.Blue;
-            this.label19.Location = new System.Drawing.Point(12, 73);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(313, 73);
-            this.label19.TabIndex = 16;
-            this.label19.Text = "Rs.184,500";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // button5
-            // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.BackColor = System.Drawing.Color.White;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.button5.Location = new System.Drawing.Point(12, 182);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(115, 34);
-            this.button5.TabIndex = 17;
-            this.button5.Text = "→View Only";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.Image = global::FOT_BFMS.Properties.Resources.banking__1_;
-            this.pictureBox4.Location = new System.Drawing.Point(348, 70);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(85, 74);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 18;
-            this.pictureBox4.TabStop = false;
-            // 
-            // roundControl3
-            // 
-            this.roundControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.roundControl3.AutoScroll = true;
-            this.roundControl3.AutoSize = true;
-            this.roundControl3.BackColor = System.Drawing.Color.Navy;
-            this.roundControl3.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.roundControl3.BorderColor = System.Drawing.SystemColors.Control;
-            this.roundControl3.BorderWidth = 1F;
-            this.roundControl3.ForeColor = System.Drawing.Color.Transparent;
-            this.roundControl3.Location = new System.Drawing.Point(1110, 8);
-            this.roundControl3.Margin = new System.Windows.Forms.Padding(2);
-            this.roundControl3.Name = "roundControl3";
-            this.roundControl3.Radius = 10;
-            this.roundControl3.Size = new System.Drawing.Size(298, 69);
-            this.roundControl3.TabIndex = 2;
-            // 
-            // roundControl1
-            // 
-            this.roundControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.roundControl1.AutoScroll = true;
-            this.roundControl1.BackColor = System.Drawing.Color.Navy;
-            this.roundControl1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.roundControl1.BorderColor = System.Drawing.SystemColors.Control;
-            this.roundControl1.BorderWidth = 1F;
-            this.roundControl1.Location = new System.Drawing.Point(1044, 8);
-            this.roundControl1.Margin = new System.Windows.Forms.Padding(2);
-            this.roundControl1.Name = "roundControl1";
-            this.roundControl1.Radius = 10;
-            this.roundControl1.Size = new System.Drawing.Size(62, 69);
-            this.roundControl1.TabIndex = 3;
-            // 
             // MembersUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -660,12 +660,12 @@
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
