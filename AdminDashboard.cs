@@ -37,7 +37,9 @@ namespace FOT_BFMS
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            ReportsForm frm = new ReportsForm();
+            frm.Show();
+            this.Hide();
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -125,12 +127,22 @@ namespace FOT_BFMS
         
         private void button14_Click_1(object sender, EventArgs e)
         {
-            
+
+            MembersForm frm = new MembersForm();
+            frm.Show();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             CentralFundForm frm = new CentralFundForm();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            ReportsForm frm = new ReportsForm();
             frm.Show();
             this.Hide();
         }
