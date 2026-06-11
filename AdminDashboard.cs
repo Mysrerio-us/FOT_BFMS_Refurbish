@@ -108,5 +108,24 @@ namespace FOT_BFMS
         {
 
         }
+
+        
+
+        private void btnMembers_Click(object sender, EventArgs e)
+        {
+            MembersForm frm = new MembersForm();
+
+            frm.Show();
+
+            this.Hide();
+        }
+
+        
+        private void button14_Click_1(object sender, EventArgs e)
+        {
+            MembersForm frm = new MembersForm();
+            frm.Show();
+            this.Hide();
+        }
     }
 }
