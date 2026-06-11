@@ -146,5 +146,36 @@ namespace FOT_BFMS
             frm.Show();
             this.Hide();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            RequestApprovalForm frm = new RequestApprovalForm();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+        "Are you sure you want to logout?",
+        "Logout",
+        MessageBoxButtons.YesNo,
+        MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Login login = new Login();
+                login.Show();
+
+                this.Close();
+            }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            RequestApprovalForm frm = new RequestApprovalForm();
+            frm.Show();
+            this.Hide();
+        }
     }
 }
