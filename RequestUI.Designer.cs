@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -56,6 +56,16 @@
             this.panel1.Size = new System.Drawing.Size(824, 79);
             this.panel1.TabIndex = 0;
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::FOT_BFMS.Properties.Resources.request;
+            this.pictureBox8.Location = new System.Drawing.Point(743, 9);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(78, 62);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 21;
+            this.pictureBox8.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -67,16 +77,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Submit Fund Request";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::FOT_BFMS.Properties.Resources.request;
-            this.pictureBox8.Location = new System.Drawing.Point(743, 9);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(78, 62);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 21;
-            this.pictureBox8.TabStop = false;
             // 
             // label2
             // 
@@ -162,6 +162,7 @@
             this.button1.TabIndex = 9;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -195,6 +196,7 @@
             this.MaximumSize = new System.Drawing.Size(840, 550);
             this.MinimumSize = new System.Drawing.Size(840, 550);
             this.Name = "RequestUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "RequestUI";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
