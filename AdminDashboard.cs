@@ -20,7 +20,9 @@ namespace FOT_BFMS
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            MembersForm frm = new MembersForm();
+            frm.Show();
+            this.Hide();
         }
 
         private void pnlHelp_Paint(object sender, PaintEventArgs e)
@@ -123,7 +125,12 @@ namespace FOT_BFMS
         
         private void button14_Click_1(object sender, EventArgs e)
         {
-            MembersForm frm = new MembersForm();
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CentralFundForm frm = new CentralFundForm();
             frm.Show();
             this.Hide();
         }

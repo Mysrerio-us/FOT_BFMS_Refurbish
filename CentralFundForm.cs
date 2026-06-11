@@ -16,5 +16,15 @@ namespace FOT_BFMS
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AdminDashboard frm =
+        new AdminDashboard();
+
+            frm.Show();
+
+            this.Close();
+        }
     }
 }
