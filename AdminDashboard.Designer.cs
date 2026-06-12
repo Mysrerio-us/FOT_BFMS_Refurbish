@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlHelp = new System.Windows.Forms.Panel();
@@ -117,6 +117,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.tblCards = new System.Windows.Forms.TableLayoutPanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlHelp.SuspendLayout();
@@ -144,6 +145,7 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel3.SuspendLayout();
+            this.tblCards.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -182,6 +184,7 @@
             // 
             // pnlHelp
             // 
+            this.pnlHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlHelp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlHelp.Controls.Add(this.button10);
             this.pnlHelp.Controls.Add(this.label4);
@@ -434,9 +437,10 @@
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(240, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1126, 85);
+            this.panel2.Size = new System.Drawing.Size(1108, 100);
             this.panel2.TabIndex = 1;
             // 
             // dateTimePicker1
@@ -584,6 +588,8 @@
             // 
             // panel7
             // 
+            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.label31);
@@ -594,7 +600,7 @@
             this.panel7.ForeColor = System.Drawing.Color.Black;
             this.panel7.Location = new System.Drawing.Point(956, 589);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(380, 120);
+            this.panel7.Size = new System.Drawing.Size(382, 120);
             this.panel7.TabIndex = 10;
             // 
             // label28
@@ -664,6 +670,7 @@
             // 
             // pnlPending
             // 
+            this.pnlPending.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlPending.BackColor = System.Drawing.Color.White;
             this.pnlPending.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlPending.Controls.Add(this.pictureBox9);
@@ -674,7 +681,7 @@
             this.pnlPending.Controls.Add(this.label28);
             this.pnlPending.Location = new System.Drawing.Point(956, 494);
             this.pnlPending.Name = "pnlPending";
-            this.pnlPending.Size = new System.Drawing.Size(380, 89);
+            this.pnlPending.Size = new System.Drawing.Size(382, 89);
             this.pnlPending.TabIndex = 9;
             // 
             // label26
@@ -708,13 +715,14 @@
             this.colRank,
             this.colName,
             this.colAmount});
-            this.dgvContributors.Location = new System.Drawing.Point(3, 43);
+            this.dgvContributors.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvContributors.Location = new System.Drawing.Point(0, 0);
             this.dgvContributors.Name = "dgvContributors";
             this.dgvContributors.ReadOnly = true;
             this.dgvContributors.RowHeadersVisible = false;
             this.dgvContributors.RowHeadersWidth = 51;
             this.dgvContributors.RowTemplate.Height = 24;
-            this.dgvContributors.Size = new System.Drawing.Size(299, 150);
+            this.dgvContributors.Size = new System.Drawing.Size(305, 213);
             this.dgvContributors.TabIndex = 5;
             // 
             // colRank
@@ -740,6 +748,9 @@
             // 
             // pnlContributors
             // 
+            this.pnlContributors.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlContributors.BackColor = System.Drawing.Color.White;
             this.pnlContributors.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlContributors.Controls.Add(this.dgvContributors);
@@ -789,7 +800,7 @@
             this.dgvActivities.RowHeadersWidth = 51;
             this.dgvActivities.RowTemplate.Height = 24;
             this.dgvActivities.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvActivities.Size = new System.Drawing.Size(342, 150);
+            this.dgvActivities.Size = new System.Drawing.Size(342, 234);
             this.dgvActivities.TabIndex = 6;
             // 
             // colActivity
@@ -808,6 +819,8 @@
             // 
             // pnlActivities
             // 
+            this.pnlActivities.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlActivities.BackColor = System.Drawing.Color.White;
             this.pnlActivities.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlActivities.Controls.Add(this.dgvActivities);
@@ -891,6 +904,7 @@
             // 
             // panel8
             // 
+            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel8.BackColor = System.Drawing.Color.White;
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.progressBar1);
@@ -902,7 +916,7 @@
             this.panel8.Controls.Add(this.pictureBox10);
             this.panel8.Location = new System.Drawing.Point(952, 264);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(384, 213);
+            this.panel8.Size = new System.Drawing.Size(386, 213);
             this.panel8.TabIndex = 11;
             // 
             // label22
@@ -918,21 +932,22 @@
             // chart1
             // 
             this.chart1.BorderlineWidth = 3;
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
-            this.chart1.Location = new System.Drawing.Point(13, 40);
+            chartArea5.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea5);
+            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend5.Name = "Legend1";
+            this.chart1.Legends.Add(legend5);
+            this.chart1.Location = new System.Drawing.Point(0, 0);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Legend = "Legend1";
-            series3.MarkerSize = 8;
-            series3.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series3.Name = "Series1";
-            this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(632, 168);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.Legend = "Legend1";
+            series5.MarkerSize = 8;
+            series5.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series5.Name = "Series1";
+            this.chart1.Series.Add(series5);
+            this.chart1.Size = new System.Drawing.Size(648, 211);
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
             this.chart1.Click += new System.EventHandler(this.chart1_Click);
@@ -949,6 +964,8 @@
             // 
             // pnlChart
             // 
+            this.pnlChart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlChart.BackColor = System.Drawing.Color.White;
             this.pnlChart.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlChart.Controls.Add(this.label23);
@@ -1006,11 +1023,13 @@
             this.panel6.Controls.Add(this.label20);
             this.panel6.Controls.Add(this.label19);
             this.panel6.Controls.Add(this.pictureBox7);
-            this.panel6.Location = new System.Drawing.Point(1106, 110);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(841, 10);
             this.panel6.Margin = new System.Windows.Forms.Padding(10);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(230, 130);
+            this.panel6.Size = new System.Drawing.Size(257, 130);
             this.panel6.TabIndex = 5;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // label15
             // 
@@ -1070,11 +1089,13 @@
             this.panel5.Controls.Add(this.pictureBox6);
             this.panel5.Controls.Add(this.label16);
             this.panel5.Controls.Add(this.label15);
-            this.panel5.Location = new System.Drawing.Point(826, 110);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(564, 10);
             this.panel5.Margin = new System.Windows.Forms.Padding(10);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(230, 130);
+            this.panel5.Size = new System.Drawing.Size(257, 130);
             this.panel5.TabIndex = 4;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // pictureBox5
             // 
@@ -1122,11 +1143,13 @@
             this.panel4.Controls.Add(this.label13);
             this.panel4.Controls.Add(this.label12);
             this.panel4.Controls.Add(this.pictureBox5);
-            this.panel4.Location = new System.Drawing.Point(549, 110);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(287, 10);
             this.panel4.Margin = new System.Windows.Forms.Padding(10);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(230, 130);
+            this.panel4.Size = new System.Drawing.Size(257, 130);
             this.panel4.TabIndex = 3;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // pictureBox4
             // 
@@ -1174,33 +1197,49 @@
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.pictureBox4);
-            this.panel3.Location = new System.Drawing.Point(263, 110);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(10, 10);
             this.panel3.Margin = new System.Windows.Forms.Padding(10);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(233, 130);
+            this.panel3.Size = new System.Drawing.Size(257, 130);
             this.panel3.TabIndex = 2;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // tblCards
+            // 
+            this.tblCards.ColumnCount = 4;
+            this.tblCards.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tblCards.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tblCards.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tblCards.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tblCards.Controls.Add(this.panel3, 0, 0);
+            this.tblCards.Controls.Add(this.panel6, 3, 0);
+            this.tblCards.Controls.Add(this.panel4, 1, 0);
+            this.tblCards.Controls.Add(this.panel5, 2, 0);
+            this.tblCards.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tblCards.Location = new System.Drawing.Point(240, 100);
+            this.tblCards.Name = "tblCards";
+            this.tblCards.RowCount = 1;
+            this.tblCards.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblCards.Size = new System.Drawing.Size(1108, 150);
+            this.tblCards.TabIndex = 12;
             // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1348, 721);
+            this.Controls.Add(this.tblCards);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.pnlPending);
             this.Controls.Add(this.pnlContributors);
             this.Controls.Add(this.pnlActivities);
             this.Controls.Add(this.pnlChart);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximizeBox = false;
             this.Name = "AdminDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminDashboard";
@@ -1245,6 +1284,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.tblCards.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1336,5 +1376,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TableLayoutPanel tblCards;
     }
 }
