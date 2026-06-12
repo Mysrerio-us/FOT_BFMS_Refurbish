@@ -186,5 +186,10 @@ namespace FOT_BFMS
         {
 
         }
+
+        private void roundControlLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
