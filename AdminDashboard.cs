@@ -32,7 +32,9 @@ namespace FOT_BFMS
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            AnalyticsForm frm = new AnalyticsForm();
+            frm.Show();
+            this.Hide();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -83,7 +85,7 @@ namespace FOT_BFMS
             chart1.Legends.Clear();
 
 
-            
+
             dgvContributors.Rows.Add("1", "SK Fernando", "45000");
             dgvContributors.Rows.Add("2", "John Perera", "38000");
             dgvContributors.Rows.Add("3", "Alex Kumar", "30000");
@@ -113,7 +115,7 @@ namespace FOT_BFMS
 
         }
 
-        
+
 
         private void btnMembers_Click(object sender, EventArgs e)
         {
@@ -124,7 +126,7 @@ namespace FOT_BFMS
             this.Hide();
         }
 
-        
+
         private void button14_Click_1(object sender, EventArgs e)
         {
 
@@ -197,5 +199,20 @@ namespace FOT_BFMS
         {
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            BackupForm frm = new BackupForm();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            SettingsForm frm = new SettingsForm();
+            frm.Show();
+            this.Hide();
+        
+    }
     }
 }
