@@ -108,5 +108,26 @@ namespace FOT_BFMS
             RequestUI requestWindow = new RequestUI();
             requestWindow.ShowDialog();
         }
+
+        private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Successfully Log out from Member Account !", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
     }
 }
