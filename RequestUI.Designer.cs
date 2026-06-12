@@ -41,6 +41,9 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.roundControl1 = new FOT_BFMS.RoundControl();
+            this.roundControl2 = new FOT_BFMS.RoundControl();
+            this.roundControl3 = new FOT_BFMS.RoundControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
@@ -120,18 +123,20 @@
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(267, 120);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(429, 29);
+            this.textBox1.Size = new System.Drawing.Size(494, 29);
             this.textBox1.TabIndex = 5;
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.Control;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(267, 172);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(429, 29);
+            this.textBox2.Size = new System.Drawing.Size(494, 29);
             this.textBox2.TabIndex = 6;
             // 
             // dateTimePicker1
@@ -144,9 +149,10 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(267, 274);
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox1.Location = new System.Drawing.Point(260, 275);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(429, 104);
+            this.richTextBox1.Size = new System.Drawing.Size(502, 114);
             this.richTextBox1.TabIndex = 8;
             this.richTextBox1.Text = "";
             // 
@@ -170,17 +176,57 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(601, 467);
+            this.button2.Location = new System.Drawing.Point(676, 467);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(95, 32);
             this.button2.TabIndex = 10;
             this.button2.Text = "Submit";
             this.button2.UseVisualStyleBackColor = false;
             // 
+            // roundControl1
+            // 
+            this.roundControl1.BackColor = System.Drawing.Color.White;
+            this.roundControl1.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.roundControl1.BorderColor = System.Drawing.SystemColors.Control;
+            this.roundControl1.BorderWidth = 1F;
+            this.roundControl1.Location = new System.Drawing.Point(241, 110);
+            this.roundControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roundControl1.Name = "roundControl1";
+            this.roundControl1.Radius = 10;
+            this.roundControl1.Size = new System.Drawing.Size(543, 48);
+            this.roundControl1.TabIndex = 11;
+            // 
+            // roundControl2
+            // 
+            this.roundControl2.BackColor = System.Drawing.Color.White;
+            this.roundControl2.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.roundControl2.BorderColor = System.Drawing.SystemColors.Control;
+            this.roundControl2.BorderWidth = 1F;
+            this.roundControl2.Location = new System.Drawing.Point(241, 162);
+            this.roundControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roundControl2.Name = "roundControl2";
+            this.roundControl2.Radius = 10;
+            this.roundControl2.Size = new System.Drawing.Size(543, 48);
+            this.roundControl2.TabIndex = 12;
+            // 
+            // roundControl3
+            // 
+            this.roundControl3.BackColor = System.Drawing.Color.White;
+            this.roundControl3.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.roundControl3.BorderColor = System.Drawing.SystemColors.Control;
+            this.roundControl3.BorderWidth = 1F;
+            this.roundControl3.Location = new System.Drawing.Point(241, 262);
+            this.roundControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roundControl3.Name = "roundControl3";
+            this.roundControl3.Radius = 10;
+            this.roundControl3.Size = new System.Drawing.Size(543, 142);
+            this.roundControl3.TabIndex = 13;
+            // 
             // RequestUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(824, 511);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -193,6 +239,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.roundControl1);
+            this.Controls.Add(this.roundControl2);
+            this.Controls.Add(this.roundControl3);
             this.MaximumSize = new System.Drawing.Size(840, 550);
             this.MinimumSize = new System.Drawing.Size(840, 550);
             this.Name = "RequestUI";
@@ -221,5 +270,8 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private RoundControl roundControl1;
+        private RoundControl roundControl2;
+        private RoundControl roundControl3;
     }
 }

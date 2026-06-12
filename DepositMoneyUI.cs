@@ -31,5 +31,10 @@ namespace FOT_BFMS
         {
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Money Deposited Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

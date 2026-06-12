@@ -41,8 +41,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.roundControl1 = new FOT_BFMS.RoundControl();
+            this.roundControl2 = new FOT_BFMS.RoundControl();
+            this.roundControl3 = new FOT_BFMS.RoundControl();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -62,6 +65,9 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.roundControl1);
+            this.panel1.Controls.Add(this.roundControl2);
+            this.panel1.Controls.Add(this.roundControl3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -71,6 +77,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.Control;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(145, 140);
             this.textBox2.Name = "textBox2";
@@ -89,6 +96,7 @@
             this.button2.TabIndex = 9;
             this.button2.Text = "Submit";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -125,14 +133,17 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.Control;
+            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.SystemColors.Control;
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(145, 187);
+            this.dateTimePicker1.Location = new System.Drawing.Point(145, 184);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(282, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(404, 26);
             this.dateTimePicker1.TabIndex = 6;
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(145, 98);
             this.textBox1.Name = "textBox1";
@@ -180,6 +191,16 @@
             this.panel2.Size = new System.Drawing.Size(584, 63);
             this.panel2.TabIndex = 0;
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::FOT_BFMS.Properties.Resources.money;
+            this.pictureBox7.Location = new System.Drawing.Point(499, 10);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(73, 43);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 20;
+            this.pictureBox7.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -193,15 +214,41 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // pictureBox7
+            // roundControl1
             // 
-            this.pictureBox7.Image = global::FOT_BFMS.Properties.Resources.money;
-            this.pictureBox7.Location = new System.Drawing.Point(499, 10);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(73, 43);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 20;
-            this.pictureBox7.TabStop = false;
+            this.roundControl1.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.roundControl1.BorderColor = System.Drawing.SystemColors.Control;
+            this.roundControl1.BorderWidth = 1F;
+            this.roundControl1.Location = new System.Drawing.Point(121, 85);
+            this.roundControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roundControl1.Name = "roundControl1";
+            this.roundControl1.Radius = 10;
+            this.roundControl1.Size = new System.Drawing.Size(451, 50);
+            this.roundControl1.TabIndex = 11;
+            // 
+            // roundControl2
+            // 
+            this.roundControl2.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.roundControl2.BorderColor = System.Drawing.SystemColors.Control;
+            this.roundControl2.BorderWidth = 1F;
+            this.roundControl2.Location = new System.Drawing.Point(121, 129);
+            this.roundControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roundControl2.Name = "roundControl2";
+            this.roundControl2.Radius = 10;
+            this.roundControl2.Size = new System.Drawing.Size(451, 50);
+            this.roundControl2.TabIndex = 12;
+            // 
+            // roundControl3
+            // 
+            this.roundControl3.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.roundControl3.BorderColor = System.Drawing.SystemColors.Control;
+            this.roundControl3.BorderWidth = 1F;
+            this.roundControl3.Location = new System.Drawing.Point(121, 171);
+            this.roundControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roundControl3.Name = "roundControl3";
+            this.roundControl3.Radius = 10;
+            this.roundControl3.Size = new System.Drawing.Size(451, 50);
+            this.roundControl3.TabIndex = 13;
             // 
             // DepositMoneyUI
             // 
@@ -245,5 +292,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private RoundControl roundControl1;
+        private RoundControl roundControl2;
+        private RoundControl roundControl3;
     }
 }
