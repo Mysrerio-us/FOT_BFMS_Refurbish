@@ -28,51 +28,484 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.labelLogin = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBoxUsername = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.pictureBoxEyeClose = new System.Windows.Forms.PictureBox();
+            this.pictureBoxEyeOpen = new System.Windows.Forms.PictureBox();
+            this.pictureBoxClossApp = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.roundControl7 = new FOT_BFMS.RoundControl();
+            this.roundControlLogin = new FOT_BFMS.RoundControl();
+            this.roundControl4 = new FOT_BFMS.RoundControl();
+            this.roundControl2 = new FOT_BFMS.RoundControl();
+            this.roundControl3 = new FOT_BFMS.RoundControl();
             this.roundControl1 = new FOT_BFMS.RoundControl();
+            this.roundControl6 = new FOT_BFMS.RoundControl();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEyeClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEyeOpen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClossApp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // label1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
-            this.groupBox1.Location = new System.Drawing.Point(-19, -19);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(722, 656);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift", 22F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(144)))), ((int)(((byte)(191)))));
+            this.label1.Location = new System.Drawing.Point(512, 94);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(211, 36);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Welcome Back";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Bahnschrift", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label2.Location = new System.Drawing.Point(515, 136);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(178, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Sign in to your account to continue";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(515, 169);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 14);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "USERNAME";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label4.Location = new System.Drawing.Point(515, 253);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 14);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "PASSWORD";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.Color.White;
+            this.checkBox1.Font = new System.Drawing.Font("Bahnschrift", 7.8F);
+            this.checkBox1.Location = new System.Drawing.Point(518, 336);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(98, 17);
+            this.checkBox1.TabIndex = 11;
+            this.checkBox1.Text = "Remember me";
+            this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.White;
+            this.linkLabel1.Font = new System.Drawing.Font("Bahnschrift", 7.8F);
+            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(144)))), ((int)(((byte)(191)))));
+            this.linkLabel1.Location = new System.Drawing.Point(682, 339);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(99, 13);
+            this.linkLabel1.TabIndex = 12;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Forgot Password?";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // labelLogin
+            // 
+            this.labelLogin.AutoSize = true;
+            this.labelLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(144)))), ((int)(((byte)(191)))));
+            this.labelLogin.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogin.ForeColor = System.Drawing.Color.White;
+            this.labelLogin.Location = new System.Drawing.Point(625, 375);
+            this.labelLogin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelLogin.Name = "labelLogin";
+            this.labelLogin.Size = new System.Drawing.Size(53, 19);
+            this.labelLogin.TabIndex = 14;
+            this.labelLogin.Text = "Log In";
+            this.labelLogin.Click += new System.EventHandler(this.label5_Click_1);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.Font = new System.Drawing.Font("Bahnschrift", 5F);
+            this.label6.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label6.Location = new System.Drawing.Point(596, 436);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(120, 8);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Version 0.1 | © All Rights Reserved ";
+            // 
+            // textBoxUsername
+            // 
+            this.textBoxUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(226)))), ((int)(((byte)(217)))));
+            this.textBoxUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxUsername.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUsername.Location = new System.Drawing.Point(538, 202);
+            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.Size = new System.Drawing.Size(176, 17);
+            this.textBoxUsername.TabIndex = 16;
+            this.textBoxUsername.TextChanged += new System.EventHandler(this.textBoxUsername_TextChanged);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Location = new System.Drawing.Point(531, 223);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(225, 1);
+            this.panel1.TabIndex = 17;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Location = new System.Drawing.Point(532, 308);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(225, 1);
+            this.panel2.TabIndex = 18;
+            // 
+            // textBoxPassword
+            // 
+            this.textBoxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(226)))), ((int)(((byte)(217)))));
+            this.textBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPassword.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPassword.Location = new System.Drawing.Point(538, 289);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.Size = new System.Drawing.Size(176, 17);
+            this.textBoxPassword.TabIndex = 19;
+            this.textBoxPassword.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
+            // 
+            // pictureBoxEyeClose
+            // 
+            this.pictureBoxEyeClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(226)))), ((int)(((byte)(217)))));
+            this.pictureBoxEyeClose.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxEyeClose.Image")));
+            this.pictureBoxEyeClose.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxEyeClose.InitialImage")));
+            this.pictureBoxEyeClose.Location = new System.Drawing.Point(734, 286);
+            this.pictureBoxEyeClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxEyeClose.Name = "pictureBoxEyeClose";
+            this.pictureBoxEyeClose.Size = new System.Drawing.Size(22, 22);
+            this.pictureBoxEyeClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxEyeClose.TabIndex = 20;
+            this.pictureBoxEyeClose.TabStop = false;
+            this.pictureBoxEyeClose.Click += new System.EventHandler(this.pictureBoxEyeClose_Click);
+            // 
+            // pictureBoxEyeOpen
+            // 
+            this.pictureBoxEyeOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(226)))), ((int)(((byte)(217)))));
+            this.pictureBoxEyeOpen.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxEyeOpen.Image")));
+            this.pictureBoxEyeOpen.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxEyeOpen.InitialImage")));
+            this.pictureBoxEyeOpen.Location = new System.Drawing.Point(735, 286);
+            this.pictureBoxEyeOpen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxEyeOpen.Name = "pictureBoxEyeOpen";
+            this.pictureBoxEyeOpen.Size = new System.Drawing.Size(22, 22);
+            this.pictureBoxEyeOpen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxEyeOpen.TabIndex = 21;
+            this.pictureBoxEyeOpen.TabStop = false;
+            this.pictureBoxEyeOpen.Click += new System.EventHandler(this.pictureBoxEyeOpen_Click);
+            // 
+            // pictureBoxClossApp
+            // 
+            this.pictureBoxClossApp.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBoxClossApp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxClossApp.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxClossApp.Image")));
+            this.pictureBoxClossApp.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxClossApp.InitialImage")));
+            this.pictureBoxClossApp.Location = new System.Drawing.Point(812, 11);
+            this.pictureBoxClossApp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxClossApp.Name = "pictureBoxClossApp";
+            this.pictureBoxClossApp.Size = new System.Drawing.Size(26, 28);
+            this.pictureBoxClossApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxClossApp.TabIndex = 22;
+            this.pictureBoxClossApp.TabStop = false;
+            this.pictureBoxClossApp.Click += new System.EventHandler(this.pictureBoxClossApp_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Font = new System.Drawing.Font("Bahnschrift", 8F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label7.Location = new System.Drawing.Point(584, 414);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(143, 13);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "If you don\'t have an account";
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.BackColor = System.Drawing.Color.White;
+            this.linkLabel2.Font = new System.Drawing.Font("Bahnschrift", 10F, System.Drawing.FontStyle.Bold);
+            this.linkLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(144)))), ((int)(((byte)(191)))));
+            this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(144)))), ((int)(((byte)(191)))));
+            this.linkLabel2.Location = new System.Drawing.Point(718, 412);
+            this.linkLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(57, 17);
+            this.linkLabel2.TabIndex = 24;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Sign up";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(108, 43);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(214, 205);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
+            this.label8.Font = new System.Drawing.Font("Bookman Old Style", 30F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(133, 260);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(180, 47);
+            this.label8.TabIndex = 26;
+            this.label8.Text = "B F M S";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
+            this.label9.Font = new System.Drawing.Font("Bookman Old Style", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(28, 308);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(423, 28);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "Batch Fund Management System";
+            // 
+            // roundControl7
+            // 
+            this.roundControl7.BackColor = System.Drawing.Color.Transparent;
+            this.roundControl7.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
+            this.roundControl7.BorderColor = System.Drawing.SystemColors.Control;
+            this.roundControl7.BorderWidth = 1F;
+            this.roundControl7.Location = new System.Drawing.Point(811, 101);
+            this.roundControl7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roundControl7.Name = "roundControl7";
+            this.roundControl7.Radius = 10;
+            this.roundControl7.Size = new System.Drawing.Size(135, 310);
+            this.roundControl7.TabIndex = 29;
+            // 
+            // roundControlLogin
+            // 
+            this.roundControlLogin.BackColor = System.Drawing.Color.White;
+            this.roundControlLogin.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(144)))), ((int)(((byte)(191)))));
+            this.roundControlLogin.BorderColor = System.Drawing.SystemColors.Control;
+            this.roundControlLogin.BorderWidth = 1F;
+            this.roundControlLogin.Location = new System.Drawing.Point(511, 357);
+            this.roundControlLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roundControlLogin.Name = "roundControlLogin";
+            this.roundControlLogin.Radius = 10;
+            this.roundControlLogin.Size = new System.Drawing.Size(264, 54);
+            this.roundControlLogin.TabIndex = 13;
+            this.roundControlLogin.Load += new System.EventHandler(this.roundControlLogin_Load);
+            this.roundControlLogin.Click += new System.EventHandler(this.roundControlLogin_Click);
+            // 
+            // roundControl4
+            // 
+            this.roundControl4.BackColor = System.Drawing.Color.White;
+            this.roundControl4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(226)))), ((int)(((byte)(217)))));
+            this.roundControl4.BorderColor = System.Drawing.SystemColors.Control;
+            this.roundControl4.BorderWidth = 1F;
+            this.roundControl4.Location = new System.Drawing.Point(511, 270);
+            this.roundControl4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roundControl4.Name = "roundControl4";
+            this.roundControl4.Radius = 10;
+            this.roundControl4.Size = new System.Drawing.Size(264, 54);
+            this.roundControl4.TabIndex = 9;
+            this.roundControl4.Load += new System.EventHandler(this.roundControl4_Load);
+            // 
+            // roundControl2
+            // 
+            this.roundControl2.BackColor = System.Drawing.Color.White;
+            this.roundControl2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(226)))), ((int)(((byte)(217)))));
+            this.roundControl2.BorderColor = System.Drawing.SystemColors.Control;
+            this.roundControl2.BorderWidth = 1F;
+            this.roundControl2.Location = new System.Drawing.Point(511, 185);
+            this.roundControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roundControl2.Name = "roundControl2";
+            this.roundControl2.Radius = 10;
+            this.roundControl2.Size = new System.Drawing.Size(264, 54);
+            this.roundControl2.TabIndex = 8;
+            this.roundControl2.Load += new System.EventHandler(this.roundControl2_Load);
+            // 
+            // roundControl3
+            // 
+            this.roundControl3.BackColor = System.Drawing.Color.Transparent;
+            this.roundControl3.BackgroundColor = System.Drawing.Color.White;
+            this.roundControl3.BorderColor = System.Drawing.SystemColors.Control;
+            this.roundControl3.BorderWidth = 3F;
+            this.roundControl3.Location = new System.Drawing.Point(490, 63);
+            this.roundControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roundControl3.Name = "roundControl3";
+            this.roundControl3.Radius = 10;
+            this.roundControl3.Size = new System.Drawing.Size(311, 396);
+            this.roundControl3.TabIndex = 3;
+            this.roundControl3.Load += new System.EventHandler(this.roundControl3_Load);
             // 
             // roundControl1
             // 
-            this.roundControl1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.roundControl1.BackgroundColor = System.Drawing.SystemColors.ButtonShadow;
+            this.roundControl1.BackColor = System.Drawing.Color.Transparent;
+            this.roundControl1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
             this.roundControl1.BorderColor = System.Drawing.SystemColors.Control;
             this.roundControl1.BorderWidth = 1F;
-            this.roundControl1.Location = new System.Drawing.Point(772, 111);
+            this.roundControl1.Location = new System.Drawing.Point(2, 2);
+            this.roundControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.roundControl1.Name = "roundControl1";
             this.roundControl1.Radius = 10;
-            this.roundControl1.Size = new System.Drawing.Size(302, 355);
+            this.roundControl1.Size = new System.Drawing.Size(466, 508);
             this.roundControl1.TabIndex = 1;
+            // 
+            // roundControl6
+            // 
+            this.roundControl6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
+            this.roundControl6.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
+            this.roundControl6.BorderColor = System.Drawing.SystemColors.Control;
+            this.roundControl6.BorderWidth = 1F;
+            this.roundControl6.Location = new System.Drawing.Point(-114, 101);
+            this.roundControl6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roundControl6.Name = "roundControl6";
+            this.roundControl6.Radius = 10;
+            this.roundControl6.Size = new System.Drawing.Size(135, 310);
+            this.roundControl6.TabIndex = 30;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 628);
+            this.ClientSize = new System.Drawing.Size(845, 510);
+            this.Controls.Add(this.roundControl6);
+            this.Controls.Add(this.pictureBoxClossApp);
+            this.Controls.Add(this.roundControl7);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.linkLabel2);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.pictureBoxEyeOpen);
+            this.Controls.Add(this.pictureBoxEyeClose);
+            this.Controls.Add(this.textBoxPassword);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.textBoxUsername);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.labelLogin);
+            this.Controls.Add(this.roundControlLogin);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.roundControl4);
+            this.Controls.Add(this.roundControl2);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.roundControl3);
             this.Controls.Add(this.roundControl1);
-            this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Login_Paint);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEyeClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEyeOpen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClossApp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
         private RoundControl roundControl1;
+        private RoundControl roundControl3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private RoundControl roundControl2;
+        private RoundControl roundControl4;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private RoundControl roundControlLogin;
+        private System.Windows.Forms.Label labelLogin;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBoxUsername;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox textBoxPassword;
+        private System.Windows.Forms.PictureBox pictureBoxEyeClose;
+        private System.Windows.Forms.PictureBox pictureBoxEyeOpen;
+        private System.Windows.Forms.PictureBox pictureBoxClossApp;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private RoundControl roundControl7;
+        private RoundControl roundControl6;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

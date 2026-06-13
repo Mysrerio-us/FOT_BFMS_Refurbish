@@ -29,19 +29,34 @@ namespace FOT_BFMS
             get { return backgroundColor; }
             set
             {
-                backgroundBrush = new SolidBrush(backgroundColor = value);
+                backgroundColor = value;
+
+                if (backgroundBrush != null)
+                    backgroundBrush.Dispose();
+
+                if (backgroundColor == Color.Transparent)
+                    backgroundBrush = null;
+                else
+                    backgroundBrush = new SolidBrush(backgroundColor);
+
                 Invalidate();
             }
         }
         private Color borderColor = SystemColors.Control;
         private Pen borderPen = new Pen(ControlPaint.Light(SystemColors.Control, 0.0f), 0);
-        
+
         public Color BorderColor
         {
             get { return borderColor; }
             set
             {
-                borderPen = new Pen(ControlPaint.Light(borderColor, 0.0f), borderWidth);
+                borderColor = value;
+
+                if (borderPen != null)
+                    borderPen.Dispose();
+
+                borderPen = new Pen(borderColor, borderWidth);
+
                 Invalidate();
             }
         }
@@ -60,6 +75,8 @@ namespace FOT_BFMS
         public RoundControl()
         {
             InitializeComponent();
+            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            this.BackColor = Color.Transparent;
         }
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -72,8 +89,13 @@ namespace FOT_BFMS
         private void drawBorder(Graphics g) =>
             g.DrawRoundedRectangle(borderPen, 10, 10, Width - 20, Height - 20, radius);
 
-        private void drawBackground(Graphics g) =>
-            g.FillRoundedRectangle(backgroundBrush, 10, 10, Width - 20, Height - 20, radius);
+        private void drawBackground(Graphics g)
+        {
+            if (backgroundBrush != null)
+            {
+                g.FillRoundedRectangle(backgroundBrush, 10, 10, Width - 20, Height - 20, radius);
+            }
+        }
 
         private void RoundControl_Load(object sender, EventArgs e)
         {
