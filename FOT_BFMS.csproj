@@ -77,6 +77,11 @@
     <Compile Include="BackupForm .Designer.cs">
       <DependentUpon>BackupForm .cs</DependentUpon>
     </Compile>
+    <Compile Include="BFMSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BFMSDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CentralFundForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +95,12 @@
       <DependentUpon>DepositMoneyUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Extensions\GraphicsExtension.cs" />
+    <Compile Include="ForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,8 +175,8 @@
     <EmbeddedResource Include="CentralFundForm.resx">
       <DependentUpon>CentralFundForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DepositMoneyUI.resx">
-      <DependentUpon>DepositMoneyUI.cs</DependentUpon>
+    <EmbeddedResource Include="ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -204,6 +215,17 @@
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="BFMSDataSet.xsc">
+      <DependentUpon>BFMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BFMSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BFMSDataSet.xss">
+      <DependentUpon>BFMSDataSet.xsd</DependentUpon>
+    </None>
     <EmbeddedResource Include="WithdrawRequestForm.resx">
       <DependentUpon>WithdrawRequestForm.cs</DependentUpon>
     </EmbeddedResource>

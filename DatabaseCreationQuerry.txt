@@ -1,0 +1,47 @@
+﻿-- 1. Delete the existing empty table
+DROP TABLE signup;
+
+-- 2. Recreate the table with auto-incrementing ID
+CREATE TABLE signup (
+    userID INT IDENTITY(1,1) PRIMARY KEY,
+    userName VARCHAR(50) NOT NULL UNIQUE,          -- Prevents duplicate usernames
+    FirstName VARCHAR(50) NOT NULL,
+    LastName VARCHAR(50) NOT NULL,
+    Email VARCHAR(100) NOT NULL UNIQUE,            -- Prevents duplicate emails
+    [Password] VARCHAR(255) NOT NULL,              -- Password is required
+    PhoneNumber VARCHAR(20),
+    OTP VARCHAR(10),
+    roles VARCHAR(50) ,              -- Automatically assigns a default role
+    temporary_password VARCHAR(255),
+    CreatedDate DATE DEFAULT CAST(GETDATE() AS DATE)       -- Automatically captures date and exact time
+);
+
+INSERT INTO signup(
+    userName, FirstName, LastName, Email, 
+    Password, PhoneNumber, OTP, roles, temporary_password
+)
+VALUES 
+(
+    'memberDemo@bfms.com', 'Member', 'Demo', 'memberDemo@bfms.com', 
+    'member', '0774216662', '123456', 'User', 'TempMember123'
+),
+(
+    'adminDemo@bfms.com', 'Alice', 'Smith', 'adminDemo@bfms.com', 
+    'admin', '0786453194', NULL, 'Admin', 'TempPass123'
+);
+
+
+
+
+SELECT TOP (1000) [userID]
+      ,[userName]
+      ,[FirstName]
+      ,[LastName]
+      ,[Email]
+      ,[Password]
+      ,[PhoneNumber]
+      ,[OTP]
+      ,[roles]
+      ,[temporary_password]
+      ,[CreatedDate]
+  FROM [BFMS].[dbo].[signup]

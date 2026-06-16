@@ -12,9 +12,12 @@ namespace FOT_BFMS
 {
     public partial class Login : Form
     {
+        
         public Login()
         {
             InitializeComponent();
+
+            
 
             textBoxPassword.PasswordChar = '*';
             pictureBoxEyeClose.Visible = true;
@@ -84,11 +87,6 @@ namespace FOT_BFMS
             }
         }
 
-        private void roundControl2_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBoxEyeOpen_Click(object sender, EventArgs e)
         {
             textBoxPassword.PasswordChar = '*';
@@ -96,29 +94,9 @@ namespace FOT_BFMS
             pictureBoxEyeClose.Visible = true;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void roundControl6_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void roundControl6_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void roundControl6_Load_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
             Signup signup = new Signup();
             signup.Show();
             this.Hide();
@@ -130,10 +108,7 @@ namespace FOT_BFMS
             
         }
 
-        private void roundControl8_Load(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void pictureBoxEyeClose_Click(object sender, EventArgs e)
         {
@@ -142,20 +117,18 @@ namespace FOT_BFMS
             pictureBoxEyeOpen.Visible = true;
         }
 
-        private void toolTip1_Popup(object sender, PopupEventArgs e)
-        {
-            
-        }
-
+        
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
-        }
+            ForgotPassword forgotPassword = new ForgotPassword();
+            forgotPassword.Show();
+            this.Hide();
 
+        }
 
         private void roundControlLogin_Click(object sender, EventArgs e)
         {
-            
+            //database check and login to admin or user
         }
         private void loginButonCheck()
         {
@@ -182,14 +155,8 @@ namespace FOT_BFMS
             loginButonCheck();
         }
 
-        private void roundControl1_Load(object sender, EventArgs e)
-        {
+       
 
-        }
-
-        private void roundControlLogin_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
