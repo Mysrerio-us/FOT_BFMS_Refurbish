@@ -82,12 +82,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BFMSDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BFMSDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BFMSDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BFMSDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BFMSDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CentralFundForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CentralFundForm.Designer.cs">
       <DependentUpon>CentralFundForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Global.cs" />
     <Compile Include="DepositMoneyUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CentralFundForm.resx">
       <DependentUpon>CentralFundForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepositMoneyUI.resx">
+      <DependentUpon>DepositMoneyUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ForgotPassword.resx">
       <DependentUpon>ForgotPassword.cs</DependentUpon>

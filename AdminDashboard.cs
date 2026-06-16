@@ -8,59 +8,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace FOT_BFMS
 {
     public partial class AdminDashboard : Form
     {
+        string loggedUsername;
+        public AdminDashboard(string username)
+        {
+            InitializeComponent();
+            loggedUsername = username;
+        }
+
         public AdminDashboard()
         {
             InitializeComponent();
+            
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            MembersForm frm = new MembersForm();
-            frm.Show();
-            this.Hide();
-        }
-
-        private void pnlHelp_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            AnalyticsForm frm = new AnalyticsForm();
-            frm.Show();
-            this.Hide();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            ReportsForm frm = new ReportsForm();
-            frm.Show();
-            this.Hide();
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label19_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chart1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
+            label7.Text = loggedUsername;
             chart1.Series.Clear();
 
             Series s = new Series();
@@ -109,6 +77,49 @@ namespace FOT_BFMS
             "Nimali deposited Rs 2,500 to central fund",
             "Yesterday, 02:20 PM");
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MembersForm frm = new MembersForm();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void pnlHelp_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            AnalyticsForm frm = new AnalyticsForm();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ReportsForm frm = new ReportsForm();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
 
         private void label34_Click(object sender, EventArgs e)
         {
@@ -216,6 +227,11 @@ namespace FOT_BFMS
     }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }

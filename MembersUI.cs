@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -123,11 +124,70 @@ namespace FOT_BFMS
         {
 
         }
+        private void roundControl3_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Successfully Log out from Member Account !", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+                
 
+        }
+
+        private void MembersUI_Load(object sender, EventArgs e)
+        {
+            LoadActiveRequestStatus();
+            label4.Text = Global.Currentuseremail; // Display the current user's name
+        }
+
+        private void LoadActiveRequestStatus()
+        {
+            try
+            {
+                using (SqlConnection con = SQLConnect.GetConnection())
+                {
+                    // Select all three fields
+                    string query = "SELECT RequestTitle, RequestAmount, Status FROM RequestTable WHERE Email = @Email";
+
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@Email", Global.Currentuseremail);
+
+                        con.Open();
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read()) // If a request exists
+                            {
+                                // Assign data to labels
+                                label17.Text = reader["RequestTitle"].ToString(); // Assume label17
+                                label15.Text = "Rs " + reader["RequestAmount"].ToString(); // Assume label15
+                                string status = reader["Status"].ToString();
+
+                                // Update status label
+                                button5.Text = status;
+
+                                // Set colors
+                                if (status == "Approved") button5.ForeColor = Color.Green;
+                                else if (status == "Rejected") button5.ForeColor = Color.Red;
+                                else button5.ForeColor = Color.Orange;
+                            }
+                            else
+                            {
+                                button5.Text = "Still Pending";
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading request: " + ex.Message);
+            }
         }
     }
 }
