@@ -11,9 +11,9 @@ namespace FOT_BFMS
     {
         public static SqlConnection GetConnection()
         {
-            return new SqlConnection(
-                "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BFMS;Integrated Security=True;Encrypt=False;TrustServerCertificate=True"
-            );
+            return new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BFMS;Integrated Security=True;Encrypt=False;TrustServerCertificate=True");
         }
+
+       
     }
 }

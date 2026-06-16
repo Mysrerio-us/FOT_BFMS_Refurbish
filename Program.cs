@@ -17,7 +17,7 @@ namespace FOT_BFMS
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new MembersUI());
+            Application.Run(new Login());
 
             
 
