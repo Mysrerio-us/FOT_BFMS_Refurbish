@@ -77,6 +77,11 @@
     <Compile Include="BackupForm .Designer.cs">
       <DependentUpon>BackupForm .cs</DependentUpon>
     </Compile>
+    <Compile Include="BFMSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BFMSDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CentralFundForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +176,17 @@
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="BFMSDataSet.xsc">
+      <DependentUpon>BFMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BFMSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BFMSDataSet.xss">
+      <DependentUpon>BFMSDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
