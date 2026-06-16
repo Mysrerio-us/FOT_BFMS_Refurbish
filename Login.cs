@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Microsoft.SqlServer.Server;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,7 +14,11 @@ namespace FOT_BFMS
 {
     public partial class Login : Form
     {
-        
+
+      
+      
+
+
         public Login()
         {
             InitializeComponent();
@@ -25,6 +31,7 @@ namespace FOT_BFMS
             makeDull();
             
         }
+        
         private void makeDull()
         {
             roundControlLogin.BackgroundColor = Color.FromArgb(230, 226, 217);
@@ -128,7 +135,62 @@ namespace FOT_BFMS
 
         private void roundControlLogin_Click(object sender, EventArgs e)
         {
-            //database check and login to admin or user
+            string username = textBoxUsername.Text.Trim();
+            string password = textBoxPassword.Text.Trim();
+
+            using (SqlConnection con = SQLConnect.GetConnection())
+            {
+                con.Open();
+
+                string query = @"SELECT Password, Roll
+                         FROM Signup
+                         WHERE Username = @username";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@username", username);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                // Username not found
+                if (!reader.Read())
+                {
+                    MessageBox.Show("Username not found");
+                    return;
+                }
+
+                string dbPassword = reader["Password"].ToString().Trim();
+                string rool = reader["Roll"].ToString().Trim();
+
+                // Password incorrect
+                if (dbPassword != password)
+                {
+                    MessageBox.Show("Incorrect password");
+                    return;
+                }
+
+                // Login success
+                MessageBox.Show("Login successful!");
+
+                if (rool.Equals("Admin",
+                    StringComparison.OrdinalIgnoreCase))
+                {
+                    AdminDashboard ad = new AdminDashboard();
+                    ad.Show();
+                }
+                else if (rool.Equals("Member",
+                    StringComparison.OrdinalIgnoreCase))
+                {
+                    MembersUI md = new MembersUI();
+                    md.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Role");
+                    return;
+                }
+
+                this.Hide();
+            }
         }
         private void loginButonCheck()
         {
@@ -154,9 +216,5 @@ namespace FOT_BFMS
         {
             loginButonCheck();
         }
-
-       
-
-        
     }
 }

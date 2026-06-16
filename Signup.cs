@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -20,6 +21,11 @@ namespace FOT_BFMS
 {
     public partial class Signup : Form
     {
+
+        SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BFMS;Integrated Security=True;Encrypt=True;Encrypt=False;;TrustServerCertificate=True");
+        SqlCommand cmd;
+        SqlDataAdapter sda;
+        DataTable dt;
         public static Login login = new Login();
         string randomNumber;
         public Signup()
@@ -383,12 +389,61 @@ namespace FOT_BFMS
         {
             login.Show();
             this.Hide();
+            INSERT();
         }
 
         private void labelSignup_Click(object sender, EventArgs e)
         {
             login.Show();
             this.Hide();
+        }
+        private void Parameters()
+        {
+            cmd.Parameters.AddWithValue("@fname", textBoxFirstName.Text);
+            cmd.Parameters.AddWithValue("@lName", textBoxLastName.Text);
+            cmd.Parameters.AddWithValue("@email", textBoxEmail.Text);
+            cmd.Parameters.AddWithValue("@password", textBoxPassword.Text);
+            cmd.Parameters.AddWithValue("@pno", maskedTextBoxPN.Text);
+            cmd.Parameters.AddWithValue("@OTP", maskedTextBoxOTP.Text);
+            cmd.Parameters.AddWithValue("@username", textBoxFirstName.Text.ToLower() + textBoxLastName.Text.ToLower());
+
+        }
+        private void INSERT()
+        {
+            if (string.IsNullOrEmpty(textBoxFirstName.Text) ||
+                string.IsNullOrEmpty(textBoxLastName.Text) ||
+                string.IsNullOrEmpty(textBoxEmail.Text) ||
+                string.IsNullOrEmpty(textBoxPassword.Text))
+
+
+            {
+                MessageBox.Show("Complete all required fields");
+                return;
+            }
+
+            try
+            {
+
+                cmd = new SqlCommand(
+                "INSERT INTO signup " +
+                "(Username, FirstName, LastName, Email, Password, PhoneNumber,OTP) " +
+                "VALUES " +
+                "(@email, @fname, @lName, @email, @password, @pno,@OTP)", con);
+
+                Parameters();
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+
+
+                MessageBox.Show("Record inserted successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
