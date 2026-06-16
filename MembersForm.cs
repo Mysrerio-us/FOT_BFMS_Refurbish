@@ -26,5 +26,10 @@ namespace FOT_BFMS
 
             this.Close();
         }
+
+        private void MembersForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
