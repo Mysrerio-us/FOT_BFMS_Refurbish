@@ -50,7 +50,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightCoral;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(26)))), ((int)(((byte)(59)))));
             this.panel1.Controls.Add(this.pictureBox8);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -190,7 +190,7 @@
             this.roundControl1.BorderColor = System.Drawing.SystemColors.Control;
             this.roundControl1.BorderWidth = 1F;
             this.roundControl1.Location = new System.Drawing.Point(241, 110);
-            this.roundControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roundControl1.Margin = new System.Windows.Forms.Padding(2);
             this.roundControl1.Name = "roundControl1";
             this.roundControl1.Radius = 10;
             this.roundControl1.Size = new System.Drawing.Size(543, 48);
@@ -203,7 +203,7 @@
             this.roundControl2.BorderColor = System.Drawing.SystemColors.Control;
             this.roundControl2.BorderWidth = 1F;
             this.roundControl2.Location = new System.Drawing.Point(241, 162);
-            this.roundControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roundControl2.Margin = new System.Windows.Forms.Padding(2);
             this.roundControl2.Name = "roundControl2";
             this.roundControl2.Radius = 10;
             this.roundControl2.Size = new System.Drawing.Size(543, 48);
@@ -216,7 +216,7 @@
             this.roundControl3.BorderColor = System.Drawing.SystemColors.Control;
             this.roundControl3.BorderWidth = 1F;
             this.roundControl3.Location = new System.Drawing.Point(241, 262);
-            this.roundControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roundControl3.Margin = new System.Windows.Forms.Padding(2);
             this.roundControl3.Name = "roundControl3";
             this.roundControl3.Radius = 10;
             this.roundControl3.Size = new System.Drawing.Size(543, 142);

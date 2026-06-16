@@ -54,7 +54,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Wheat;
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
@@ -114,9 +114,10 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.PeachPuff;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Location = new System.Drawing.Point(33, 224);
+            this.panel3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel3.Location = new System.Drawing.Point(33, 228);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(516, 48);
             this.panel3.TabIndex = 7;
@@ -125,6 +126,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(26)))), ((int)(((byte)(59)))));
             this.label5.Location = new System.Drawing.Point(3, 14);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(497, 16);
@@ -182,7 +184,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Cornsilk;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(26)))), ((int)(((byte)(59)))));
             this.panel2.Controls.Add(this.pictureBox7);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -205,7 +207,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(385, 39);
@@ -216,11 +218,12 @@
             // 
             // roundControl1
             // 
+            this.roundControl1.BackColor = System.Drawing.Color.Transparent;
             this.roundControl1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.roundControl1.BorderColor = System.Drawing.SystemColors.Control;
             this.roundControl1.BorderWidth = 1F;
             this.roundControl1.Location = new System.Drawing.Point(121, 85);
-            this.roundControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roundControl1.Margin = new System.Windows.Forms.Padding(2);
             this.roundControl1.Name = "roundControl1";
             this.roundControl1.Radius = 10;
             this.roundControl1.Size = new System.Drawing.Size(451, 50);
@@ -228,11 +231,12 @@
             // 
             // roundControl2
             // 
+            this.roundControl2.BackColor = System.Drawing.Color.Transparent;
             this.roundControl2.BackgroundColor = System.Drawing.SystemColors.Control;
             this.roundControl2.BorderColor = System.Drawing.SystemColors.Control;
             this.roundControl2.BorderWidth = 1F;
             this.roundControl2.Location = new System.Drawing.Point(121, 129);
-            this.roundControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roundControl2.Margin = new System.Windows.Forms.Padding(2);
             this.roundControl2.Name = "roundControl2";
             this.roundControl2.Radius = 10;
             this.roundControl2.Size = new System.Drawing.Size(451, 50);
@@ -240,11 +244,12 @@
             // 
             // roundControl3
             // 
+            this.roundControl3.BackColor = System.Drawing.Color.Transparent;
             this.roundControl3.BackgroundColor = System.Drawing.SystemColors.Control;
             this.roundControl3.BorderColor = System.Drawing.SystemColors.Control;
             this.roundControl3.BorderWidth = 1F;
             this.roundControl3.Location = new System.Drawing.Point(121, 171);
-            this.roundControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roundControl3.Margin = new System.Windows.Forms.Padding(2);
             this.roundControl3.Name = "roundControl3";
             this.roundControl3.Radius = 10;
             this.roundControl3.Size = new System.Drawing.Size(451, 50);
@@ -263,7 +268,7 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(600, 380);
             this.Name = "DepositMoneyUI";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DepositMoneyUI";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
