@@ -88,6 +88,7 @@
     <Compile Include="CentralFundForm.Designer.cs">
       <DependentUpon>CentralFundForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SQLConnect.cs" />
     <Compile Include="DepositMoneyUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +222,9 @@
     <None Include="BFMSDataSet.xss">
       <DependentUpon>BFMSDataSet.xsd</DependentUpon>
     </None>
+    <EmbeddedResource Include="WithdrawRequestForm.resx">
+      <DependentUpon>WithdrawRequestForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -273,6 +277,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DatabaseCreationQuerry.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

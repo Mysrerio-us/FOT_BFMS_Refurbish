@@ -98,38 +98,10 @@ namespace FOT_BFMS
 
             return isValid;
         }
-        private void Signup_Load(object sender, EventArgs e)
-        {
-        }
-        
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void roundControl3_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void textBoxEmail_TextChanged(object sender, EventArgs e)
         {
             textBoxEmail.BackColor = Color.FromArgb(230, 226, 217);
-        }
-
-        private void pictureBoxLogo_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void roundControlRightWing_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void linkLabelLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -144,15 +116,6 @@ namespace FOT_BFMS
             Application.Exit();
         }
 
-        private void toolTip1_Popup(object sender, PopupEventArgs e)
-        {
-
-        }
-
-        private void toolTip1_Popup_1(object sender, PopupEventArgs e)
-        {
-
-        }
 
         private void pictureBoxEyeOpenPW_Click(object sender, EventArgs e)
         {
@@ -182,10 +145,6 @@ namespace FOT_BFMS
             pictureBoxEyeClosePWA.Visible = false;
         }
 
-        private void label4_Click_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void pictureBoxOTC_Click(object sender, EventArgs e)       //OTP VAlidation
         {
@@ -215,11 +174,6 @@ namespace FOT_BFMS
                 maskedTextBoxOTP.Clear();
                 maskedTextBoxOTP.Focus();
             }
-        }
-
-        private void pictureBoxOTW_Click(object sender, EventArgs e)
-        {
-
         }
 
         private async void pictureBoxPNC_Click(object sender, EventArgs e)
@@ -317,11 +271,6 @@ namespace FOT_BFMS
             
         }
 
-        private void pictureBoxPNW_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void maskedTextBoxPN_TextChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(maskedTextBoxPN.Text))
@@ -358,11 +307,6 @@ namespace FOT_BFMS
         private void maskedTextBoxOTP_Click(object sender, EventArgs e)
         {
             maskedTextBoxOTP.Select(0, 0);
-        }
-
-        private void S(object sender, MaskInputRejectedEventArgs e)
-        {
-
         }
 
         private void textBoxFirstName_TextChanged(object sender, EventArgs e)

@@ -26,5 +26,11 @@ namespace FOT_BFMS
 
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            WithdrawRequestForm frm = new WithdrawRequestForm();
+            frm.ShowDialog();
+        }
     }
 }
