@@ -82,6 +82,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BFMSDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BFMSDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BFMSDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BFMSDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BFMSDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CentralFundForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +181,9 @@
     <EmbeddedResource Include="CentralFundForm.resx">
       <DependentUpon>CentralFundForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DepositMoneyUI.resx">
+      <DependentUpon>DepositMoneyUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ForgotPassword.resx">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -221,6 +234,28 @@
     </None>
     <None Include="BFMSDataSet.xss">
       <DependentUpon>BFMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet1.xsc">
+      <DependentUpon>BFMSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BFMSDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BFMSDataSet1.xss">
+      <DependentUpon>BFMSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet2.xsc">
+      <DependentUpon>BFMSDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BFMSDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BFMSDataSet2.xss">
+      <DependentUpon>BFMSDataSet2.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

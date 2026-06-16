@@ -145,7 +145,7 @@ namespace FOT_BFMS
             {
                 con.Open();
 
-                string query = @"SELECT Password, Roll
+                string query = @"SELECT Password, roles
                          FROM Signup
                          WHERE Username = @username";
 
@@ -164,7 +164,7 @@ namespace FOT_BFMS
                 }
 
                 string dbPassword = reader["Password"].ToString().Trim();
-                string rool = reader["Roll"].ToString().Trim();
+                string rool = reader["roles"].ToString().Trim();
 
                 // Password incorrect
                 if (dbPassword != password)
@@ -177,9 +177,9 @@ namespace FOT_BFMS
                 MessageBox.Show("Login successful!");
 
 
-                RequestUI ru = new RequestUI( username);
-                ru.Show();
-                this.Hide();
+                //RequestUI ru = new RequestUI( username);
+                //ru.Show();
+                //this.Hide();
 
                 if (rool.Equals("Admin",
                     StringComparison.OrdinalIgnoreCase))
@@ -188,8 +188,7 @@ namespace FOT_BFMS
                     ad.Show();
                     
                 }
-                else if (rool.Equals("Member",
-                    StringComparison.OrdinalIgnoreCase))
+                else if (rool.Equals("Member",StringComparison.OrdinalIgnoreCase)|| rool.Equals("User", StringComparison.OrdinalIgnoreCase))
                 {
                     MembersUI md = new MembersUI();
                     md.Show();
