@@ -54,7 +54,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(125, 9);
+            this.label9.Location = new System.Drawing.Point(139, 20);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(150, 50);
             this.label9.TabIndex = 7;
@@ -63,10 +63,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(13, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(13, 4);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(65, 51);
+            this.pictureBox1.Size = new System.Drawing.Size(90, 90);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -77,7 +77,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(180, 155);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(474, 230);
+            this.label2.Size = new System.Drawing.Size(464, 225);
             this.label2.TabIndex = 4;
             this.label2.Text = " 💾 Coming Soon...\n\nBackup and Restore features\nwill be available in a future\nrel" +
     "ease.";

@@ -168,7 +168,12 @@
     <Compile Include="Signup.Designer.cs">
       <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
-    <Compile Include="SQLConnect.cs" />
+    <Compile Include="WithdrawRequestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WithdrawRequestForm.Designer.cs">
+      <DependentUpon>WithdrawRequestForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -235,28 +240,9 @@
     <None Include="BFMSDataSet.xss">
       <DependentUpon>BFMSDataSet.xsd</DependentUpon>
     </None>
-    <None Include="BFMSDataSet1.xsc">
-      <DependentUpon>BFMSDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="BFMSDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BFMSDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BFMSDataSet1.xss">
-      <DependentUpon>BFMSDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="BFMSDataSet2.xsc">
-      <DependentUpon>BFMSDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="BFMSDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BFMSDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BFMSDataSet2.xss">
-      <DependentUpon>BFMSDataSet2.xsd</DependentUpon>
-    </None>
+    <EmbeddedResource Include="WithdrawRequestForm.resx">
+      <DependentUpon>WithdrawRequestForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
