@@ -1,4 +1,6 @@
-﻿-- 1. Delete the existing empty table
+﻿USE BFMS;
+
+-- 1. Delete the existing empty table
 DROP TABLE signup;
 
 -- 2. Recreate the table with auto-incrementing ID
@@ -45,3 +47,6 @@ SELECT TOP (1000) [userID]
       ,[temporary_password]
       ,[CreatedDate]
   FROM [BFMS].[dbo].[signup]
+
+
+  --Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=BFMS;Integrated Security=True;Trust Server Certificate=True

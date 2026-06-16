@@ -88,6 +88,7 @@
     <Compile Include="CentralFundForm.Designer.cs">
       <DependentUpon>CentralFundForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SQLConnect.cs" />
     <Compile Include="DepositMoneyUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -272,6 +273,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DatabaseCreationQuerry.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -59,8 +59,8 @@
             this.pictureBoxEyeClosePWA = new System.Windows.Forms.PictureBox();
             this.textBoxPasswordAgain = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
+            this.labelOTP = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBoxPNC = new System.Windows.Forms.PictureBox();
             this.pictureBoxOTC = new System.Windows.Forms.PictureBox();
@@ -129,7 +129,6 @@
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxLogo.TabIndex = 53;
             this.pictureBoxLogo.TabStop = false;
-            this.pictureBoxLogo.Click += new System.EventHandler(this.pictureBoxLogo_Click);
             // 
             // linkLabelLogin
             // 
@@ -214,7 +213,6 @@
             this.labelLastName.Size = new System.Drawing.Size(88, 18);
             this.labelLastName.TabIndex = 62;
             this.labelLastName.Text = "LAST NAME";
-            this.labelLastName.Click += new System.EventHandler(this.label4_Click);
             // 
             // labelFirstName
             // 
@@ -252,7 +250,6 @@
             this.label1.TabIndex = 59;
             this.label1.Text = "Welcome ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBoxClossApp
             // 
@@ -440,30 +437,29 @@
             this.panel6.Size = new System.Drawing.Size(350, 1);
             this.panel6.TabIndex = 99;
             // 
-            // label3
+            // labelName
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
-            this.label3.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(601, 439);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(303, 21);
-            this.label3.TabIndex = 98;
-            this.label3.Text = "Enter your Phone Number to send OTP";
+            this.labelName.AutoSize = true;
+            this.labelName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
+            this.labelName.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName.ForeColor = System.Drawing.Color.White;
+            this.labelName.Location = new System.Drawing.Point(601, 439);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(303, 21);
+            this.labelName.TabIndex = 98;
+            this.labelName.Text = "Enter your Phone Number to send OTP";
             // 
-            // label4
+            // labelOTP
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
-            this.label4.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(662, 506);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(181, 21);
-            this.label4.TabIndex = 102;
-            this.label4.Text = "Enter the OTP Number";
-            this.label4.Click += new System.EventHandler(this.label4_Click_1);
+            this.labelOTP.AutoSize = true;
+            this.labelOTP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(43)))), ((int)(((byte)(76)))));
+            this.labelOTP.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOTP.ForeColor = System.Drawing.Color.White;
+            this.labelOTP.Location = new System.Drawing.Point(662, 506);
+            this.labelOTP.Name = "labelOTP";
+            this.labelOTP.Size = new System.Drawing.Size(181, 21);
+            this.labelOTP.TabIndex = 102;
+            this.labelOTP.Text = "Enter the OTP Number";
             // 
             // panel7
             // 
@@ -507,7 +503,6 @@
             this.pictureBoxPNW.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxPNW.TabIndex = 110;
             this.pictureBoxPNW.TabStop = false;
-            this.pictureBoxPNW.Click += new System.EventHandler(this.pictureBoxPNW_Click);
             // 
             // pictureBoxOTW
             // 
@@ -519,7 +514,6 @@
             this.pictureBoxOTW.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxOTW.TabIndex = 111;
             this.pictureBoxOTW.TabStop = false;
-            this.pictureBoxOTW.Click += new System.EventHandler(this.pictureBoxOTW_Click);
             // 
             // maskedTextBoxPN
             // 
@@ -531,7 +525,6 @@
             this.maskedTextBoxPN.Name = "maskedTextBoxPN";
             this.maskedTextBoxPN.Size = new System.Drawing.Size(350, 21);
             this.maskedTextBoxPN.TabIndex = 112;
-            this.maskedTextBoxPN.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.S);
             this.maskedTextBoxPN.Click += new System.EventHandler(this.maskedTextBoxPN_Click);
             this.maskedTextBoxPN.TextChanged += new System.EventHandler(this.maskedTextBoxPN_TextChanged);
             // 
@@ -612,7 +605,6 @@
             this.roundControlRightWing.Radius = 10;
             this.roundControlRightWing.Size = new System.Drawing.Size(166, 381);
             this.roundControlRightWing.TabIndex = 57;
-            this.roundControlRightWing.Load += new System.EventHandler(this.roundControlRightWing_Load);
             // 
             // roundControl10
             // 
@@ -706,7 +698,6 @@
             this.roundControl3.Radius = 10;
             this.roundControl3.Size = new System.Drawing.Size(481, 605);
             this.roundControl3.TabIndex = 58;
-            this.roundControl3.Load += new System.EventHandler(this.roundControl3_Load);
             // 
             // roundControl7
             // 
@@ -747,10 +738,10 @@
             this.Controls.Add(this.pictureBoxPNC);
             this.Controls.Add(this.roundControl12);
             this.Controls.Add(this.roundControl11);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelOTP);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.roundControl6);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelName);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.roundControl5);
             this.Controls.Add(this.roundControlRightWing);
@@ -854,8 +845,8 @@
         private System.Windows.Forms.TextBox textBoxPasswordAgain;
         private System.Windows.Forms.Panel panel6;
         private RoundControl roundControl5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label labelOTP;
         private System.Windows.Forms.Panel panel7;
         private RoundControl roundControl6;
         private RoundControl roundControl11;
