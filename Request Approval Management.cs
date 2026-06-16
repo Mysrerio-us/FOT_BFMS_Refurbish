@@ -19,22 +19,25 @@ namespace FOT_BFMS
 
         private void RequestApprovalForm_Load(object sender, EventArgs e)
         {
-            txtRequestID.Text = "REQ001";
-            txtMemberName.Text = "SK";
-            txtRequestType.Text = "Withdraw";
-            txtAmount.Text = "3000";
-            txtRequestDate.Text = "12/06/2026";
-            txtReason.Text = "Batch Event Expenses";
+            
         }
 
         private void btnApprove_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Request Approved");
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                dataGridView1.SelectedRows[0].Cells["Status"].Value = "Approved";
+                MessageBox.Show("Request Approved!");
+            }
         }
 
         private void btnReject_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Request Rejected");
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                dataGridView1.SelectedRows[0].Cells["Status"].Value = "Rejected";
+                MessageBox.Show("Request Rejected!");
+            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -45,6 +48,11 @@ namespace FOT_BFMS
             frm.Show();
 
             this.Close();
+        }
+
+        private void txtMemberName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
