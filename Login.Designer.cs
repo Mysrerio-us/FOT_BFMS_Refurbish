@@ -354,6 +354,7 @@
             this.roundControlLogin.Radius = 10;
             this.roundControlLogin.Size = new System.Drawing.Size(352, 66);
             this.roundControlLogin.TabIndex = 13;
+            this.roundControlLogin.Load += new System.EventHandler(this.roundControlLogin_Load);
             this.roundControlLogin.Click += new System.EventHandler(this.roundControlLogin_Click);
             // 
             // roundControl4
