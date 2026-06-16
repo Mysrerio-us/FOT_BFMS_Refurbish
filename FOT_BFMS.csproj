@@ -83,6 +83,12 @@
     <Compile Include="CentralFundForm.Designer.cs">
       <DependentUpon>CentralFundForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DepositMoneyUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepositMoneyUI.Designer.cs">
+      <DependentUpon>DepositMoneyUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Extensions\GraphicsExtension.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -95,6 +101,12 @@
     </Compile>
     <Compile Include="MembersForm.Designer.cs">
       <DependentUpon>MembersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MembersUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MembersUI.Designer.cs">
+      <DependentUpon>MembersUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -109,6 +121,12 @@
     </Compile>
     <Compile Include="Request Approval Management.Designer.cs">
       <DependentUpon>Request Approval Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RequestUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequestUI.Designer.cs">
+      <DependentUpon>RequestUI.cs</DependentUpon>
     </Compile>
     <Compile Include="RoundControl.cs">
       <SubType>UserControl</SubType>
@@ -140,11 +158,17 @@
     <EmbeddedResource Include="CentralFundForm.resx">
       <DependentUpon>CentralFundForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DepositMoneyUI.resx">
+      <DependentUpon>DepositMoneyUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MembersForm.resx">
       <DependentUpon>MembersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MembersUI.resx">
+      <DependentUpon>MembersUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -161,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Request Approval Management.resx">
       <DependentUpon>Request Approval Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RequestUI.resx">
+      <DependentUpon>RequestUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RoundControl.resx">
       <DependentUpon>RoundControl.cs</DependentUpon>
