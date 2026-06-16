@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -40,11 +39,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.roundControl1 = new FOT_BFMS.RoundControl();
             this.roundControl2 = new FOT_BFMS.RoundControl();
             this.roundControl3 = new FOT_BFMS.RoundControl();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -54,7 +54,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.panel3);
@@ -74,16 +74,6 @@
             this.panel1.Size = new System.Drawing.Size(776, 410);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(193, 172);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(537, 30);
-            this.textBox2.TabIndex = 10;
             // 
             // button2
             // 
@@ -204,17 +194,6 @@
             this.panel2.Size = new System.Drawing.Size(776, 78);
             this.panel2.TabIndex = 0;
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::FOT_BFMS.Properties.Resources.money;
-            this.pictureBox7.Location = new System.Drawing.Point(665, 12);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(97, 53);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 20;
-            this.pictureBox7.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -268,6 +247,29 @@
             this.roundControl3.Size = new System.Drawing.Size(601, 62);
             this.roundControl3.TabIndex = 13;
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::FOT_BFMS.Properties.Resources.money;
+            this.pictureBox7.Location = new System.Drawing.Point(665, 12);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(97, 53);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 20;
+            this.pictureBox7.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.SystemColors.Control;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(188, 181);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(344, 25);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Transfer ID will be Auto Generated";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // DepositMoneyUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -308,10 +310,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.PictureBox pictureBox7;
         private RoundControl roundControl1;
         private RoundControl roundControl2;
         private RoundControl roundControl3;
+        private System.Windows.Forms.Label label6;
     }
 }
