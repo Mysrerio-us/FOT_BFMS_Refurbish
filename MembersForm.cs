@@ -15,7 +15,7 @@ namespace FOT_BFMS
 
     public partial class MembersForm : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BFMS;Integrated Security=True;Encrypt=False;TrustServerCertificate=True");
+        SqlConnection con = new SqlConnection("Data Source=(localdb)MSSQLLocalDB;Initial Catalog=BFMS;Integrated Security=True;Encrypt=False;TrustServerCertificate=True");
         public MembersForm()
         {
             InitializeComponent();
