@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -174,8 +175,9 @@ namespace FOT_BFMS
                 if (rool.Equals("Admin",
                     StringComparison.OrdinalIgnoreCase))
                 {
-                    AdminDashboard ad = new AdminDashboard();
+                    AdminDashboard ad = new AdminDashboard(username);
                     ad.Show();
+                    
                 }
                 else if (rool.Equals("Member",
                     StringComparison.OrdinalIgnoreCase))
