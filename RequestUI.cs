@@ -6,8 +6,10 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 namespace FOT_BFMS
@@ -16,17 +18,20 @@ namespace FOT_BFMS
 
     {
         string userEmail;
-
-        public RequestUI(string email)
-        {
-            InitializeComponent();
-            userEmail = email;
-        }
-        SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BFMS;Integrated Security=True;Encrypt=False;TrustServerCertificate=True");
         public RequestUI()
         {
             InitializeComponent();
+            
         }
+       
+
+        public RequestUI(string username)
+        {
+            InitializeComponent();
+            this.userEmail = username;
+        }
+        SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BFMS;Integrated Security=True;Encrypt=False;TrustServerCertificate=True");
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -42,16 +47,17 @@ namespace FOT_BFMS
         {
             try
             {
+                
                 con.Open();
 
                 // Check if email exists in signup table
-                string checkQuery = "SELECT COUNT(*) FROM signup WHERE Email = @Email";
+                //string checkQuery = "SELECT COUNT(*) FROM signup WHERE Email = @Email";
 
-                SqlCommand checkCmd = new SqlCommand(checkQuery, con);
-                //checkCmd.Parameters.AddWithValue("@Email", .Text);
+                // SqlCommand checkCmd = new SqlCommand(checkQuery, con);
+                //checkCmd.Parameters.AddWithValue("@Email",Global.Currentuseremail);
 
-                int count = Convert.ToInt32(checkCmd.ExecuteScalar());
-
+                // int count = Convert.ToInt32(checkCmd.ExecuteScalar());
+                int count = 1;
                 if (count > 0)
                 {
                     // Insert into RequestTable
@@ -62,11 +68,11 @@ namespace FOT_BFMS
 
                     SqlCommand cmd = new SqlCommand(query, con);
 
-                    //cmd.Parameters.AddWithValue("@RequestTitle", txtRequestTitle.Text);
-                    //cmd.Parameters.AddWithValue("@RequestAmount", txtAmount.Text);
-                    //cmd.Parameters.AddWithValue("@DataNeeded", dateTimePicker1.Value);
-                    //cmd.Parameters.AddWithValue("@Description", txtDescription.Text);
-                    //cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
+                    cmd.Parameters.AddWithValue("@RequestTitle", textBox1.Text);
+                    cmd.Parameters.AddWithValue("@RequestAmount", textBox2.Text);
+                    cmd.Parameters.AddWithValue("@DataNeeded", dateTimePicker1.Value);
+                    cmd.Parameters.AddWithValue("@Description", richTextBox1.Text);
+                    cmd.Parameters.AddWithValue("@Email", Global.Currentuseremail);
 
                     cmd.ExecuteNonQuery();
 

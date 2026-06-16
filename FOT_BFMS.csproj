@@ -88,6 +88,7 @@
     <Compile Include="CentralFundForm.Designer.cs">
       <DependentUpon>CentralFundForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Global.cs" />
     <Compile Include="DepositMoneyUI.cs">
       <SubType>Form</SubType>
     </Compile>

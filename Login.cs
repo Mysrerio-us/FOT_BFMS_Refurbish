@@ -138,6 +138,8 @@ namespace FOT_BFMS
         {
             string username = textBoxUsername.Text.Trim();
             string password = textBoxPassword.Text.Trim();
+            string email = textBoxPassword.Text.Trim();
+
 
             using (SqlConnection con = SQLConnect.GetConnection())
             {
@@ -149,6 +151,8 @@ namespace FOT_BFMS
 
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@Email", email);
+
 
                 SqlDataReader reader = cmd.ExecuteReader();
 
@@ -168,9 +172,14 @@ namespace FOT_BFMS
                     MessageBox.Show("Incorrect password");
                     return;
                 }
-
+                Global.Currentuseremail = username;
                 // Login success
                 MessageBox.Show("Login successful!");
+
+
+                RequestUI ru = new RequestUI( username);
+                ru.Show();
+                this.Hide();
 
                 if (rool.Equals("Admin",
                     StringComparison.OrdinalIgnoreCase))
@@ -217,6 +226,11 @@ namespace FOT_BFMS
         private void textBoxUsername_TextChanged(object sender, EventArgs e)
         {
             loginButonCheck();
+        }
+
+        private void roundControlLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
