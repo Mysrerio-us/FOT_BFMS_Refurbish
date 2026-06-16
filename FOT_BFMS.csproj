@@ -95,6 +95,12 @@
       <DependentUpon>DepositMoneyUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Extensions\GraphicsExtension.cs" />
+    <Compile Include="ForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,8 +169,8 @@
     <EmbeddedResource Include="CentralFundForm.resx">
       <DependentUpon>CentralFundForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DepositMoneyUI.resx">
-      <DependentUpon>DepositMoneyUI.cs</DependentUpon>
+    <EmbeddedResource Include="ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
