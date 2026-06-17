@@ -92,6 +92,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BFMSDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BFMSDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BFMSDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BFMSDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BFMSDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BFMSDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BFMSDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BFMSDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BFMSDataSet6.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CentralFundForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +188,7 @@
     <Compile Include="Signup.Designer.cs">
       <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
+    <Compile Include="SQLConnect.cs" />
     <Compile Include="WithdrawRequestForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +250,9 @@
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WithdrawRequestForm.resx">
+      <DependentUpon>WithdrawRequestForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="BFMSDataSet.xsc">
       <DependentUpon>BFMSDataSet.xsd</DependentUpon>
     </None>
@@ -240,9 +264,72 @@
     <None Include="BFMSDataSet.xss">
       <DependentUpon>BFMSDataSet.xsd</DependentUpon>
     </None>
-    <EmbeddedResource Include="WithdrawRequestForm.resx">
-      <DependentUpon>WithdrawRequestForm.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="BFMSDataSet1.xsc">
+      <DependentUpon>BFMSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BFMSDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BFMSDataSet1.xss">
+      <DependentUpon>BFMSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet2.xsc">
+      <DependentUpon>BFMSDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BFMSDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BFMSDataSet2.xss">
+      <DependentUpon>BFMSDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet3.xsc">
+      <DependentUpon>BFMSDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BFMSDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BFMSDataSet3.xss">
+      <DependentUpon>BFMSDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet4.xsc">
+      <DependentUpon>BFMSDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BFMSDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BFMSDataSet4.xss">
+      <DependentUpon>BFMSDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet5.xsc">
+      <DependentUpon>BFMSDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BFMSDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BFMSDataSet5.xss">
+      <DependentUpon>BFMSDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet6.xsc">
+      <DependentUpon>BFMSDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BFMSDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BFMSDataSet6.xss">
+      <DependentUpon>BFMSDataSet6.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
