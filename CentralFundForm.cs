@@ -83,5 +83,11 @@ namespace FOT_BFMS
                 MessageBox.Show("Please log in to make a withdrawal.");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            WithdrawRequestForm frm = new WithdrawRequestForm();
+            frm.ShowDialog();
+        }
     }
 }

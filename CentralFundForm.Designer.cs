@@ -149,7 +149,7 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(130, 66);
+            this.panel2.Location = new System.Drawing.Point(143, 67);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(300, 119);
             this.panel2.TabIndex = 1;
@@ -385,6 +385,17 @@
             this.createdAtDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.createdAtDataGridViewTextBoxColumn.Name = "createdAtDataGridViewTextBoxColumn";
             this.createdAtDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(13, 13);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(90, 90);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // CentralFundForm
             // 
