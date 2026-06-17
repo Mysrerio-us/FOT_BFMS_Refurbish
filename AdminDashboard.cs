@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -76,6 +77,136 @@ namespace FOT_BFMS
             dgvActivities.Rows.Add(
             "Nimali deposited Rs 2,500 to central fund",
             "Yesterday, 02:20 PM");
+
+            //Central Fund Show
+
+            try
+            {
+                using (SqlConnection conn = SQLConnect.GetConnection())
+                {
+                    conn.Open();
+
+                    
+
+                    //3. Load Central Fund Balance
+                    string queryBalance = "SELECT Amount FROM CentralFund WHERE AId = 1";
+                    SqlDataAdapter daBalance = new SqlDataAdapter(queryBalance, conn);
+                    DataTable dtBalance = new DataTable();
+                    daBalance.Fill(dtBalance);
+                    label10.Text = "Rs." + dtBalance.Rows[0][0].ToString();
+                    label36.Text = "Rs." + dtBalance.Rows[0][0].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading data: " + ex.Message);
+            }
+
+            //
+
+            try
+            {
+                using (SqlConnection con = SQLConnect.GetConnection())
+                {
+                    con.Open();
+                    // Count rows where the Role is either 'User' or 'Member'
+                    string query = "SELECT COUNT(*) FROM Signup WHERE roles IN ('User', 'Member')";
+
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        int totalMembers = (int)cmd.ExecuteScalar();
+
+                        // Assuming you have a label named lblMemberCount on your dashboard
+                        label16.Text = totalMembers.ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading member count: " + ex.Message);
+            }
+
+            //Progress bar for central fund
+
+            try
+            {
+                using (SqlConnection con = SQLConnect.GetConnection())
+                {
+                    con.Open();
+                    // Fetch the current balance from the database
+                    string query = "SELECT Amount FROM CentralFund WHERE AId = 1";
+
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        object result = cmd.ExecuteScalar();
+                        if (result != null && result != DBNull.Value)
+                        {
+                            decimal currentBalance = Convert.ToDecimal(result);
+
+                            // Update the Progress Bar
+                            // Ensure the value does not exceed the Maximum (500,000)
+                            int progressValue = (int)Math.Min(currentBalance, 500000);
+                            progressBar1.Value = progressValue;
+
+                            // Update your label text
+                            //lblCurrentAmount.Text = $"Rs {currentBalance:N0}";
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading progress: " + ex.Message);
+            }
+
+            //Chart1
+
+            chart1.Series.Clear();
+            Series sa = new Series("Balance")
+            {
+                ChartType = SeriesChartType.Line,
+                BorderWidth = 3,
+                Color = Color.Blue
+            };
+            chart1.Series.Add(sa);
+
+            try
+            {
+                using (SqlConnection con = SQLConnect.GetConnection())
+                {
+                    con.Open();
+                    // This query gets all deposits and withdrawals for the current year
+                    string query = @"
+                SELECT MONTH(DepositDate) as M, SUM(Amount) as NetChange FROM Deposit 
+                WHERE YEAR(DepositDate) = YEAR(GETDATE()) GROUP BY MONTH(DepositDate)
+                UNION ALL
+                SELECT MONTH(DateNeeded), -SUM(Amount) FROM Withdraw 
+                WHERE YEAR(DateNeeded) = YEAR(GETDATE()) GROUP BY MONTH(DateNeeded)";
+
+                    DataTable dt = new DataTable();
+                    new SqlDataAdapter(query, con).Fill(dt);
+
+                    // Group by month to get net change
+                    var monthlyData = dt.AsEnumerable()
+                        .GroupBy(row => row.Field<int>("M"))
+                        .Select(g => new { Month = g.Key, Total = g.Sum(r => r.Field<decimal>("NetChange")) })
+                        .OrderBy(x => x.Month);
+
+                    decimal runningTotal = 0;
+                    string[] monthNames = { "", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
+
+                    foreach (var item in monthlyData)
+                    {
+                        runningTotal += item.Total;
+                        sa.Points.AddXY(monthNames[item.Month], runningTotal);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Chart Error: " + ex.Message);
+            }
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -110,11 +241,6 @@ namespace FOT_BFMS
         }
 
         private void label19_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chart1_Click(object sender, EventArgs e)
         {
 
         }
@@ -241,6 +367,13 @@ namespace FOT_BFMS
             WithdrawRequestForm frm = new WithdrawRequestForm();
             frm.Show();
             this.Hide();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            DepositMoneyUI frm = new DepositMoneyUI();
+            frm.ShowDialog();
+            
         }
     }
 }

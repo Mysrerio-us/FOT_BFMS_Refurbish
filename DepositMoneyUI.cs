@@ -15,30 +15,42 @@ namespace FOT_BFMS
     {
         public DepositMoneyUI()
         {
+            
             InitializeComponent();
+            btnSubmit.BackColor = Color.FromArgb(0, 123, 255); // Bootstrap primary color
+            btnCancel.BackColor = Color.FromArgb(220, 53, 69); // Bootstrap danger color
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void DepositMoneyUI_Load(object sender, EventArgs e)
         {
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+        }
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+      
+
+        private void btnSubmit_Click(object sender, EventArgs e)
         {
-            // Basic validation
-            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            if (!decimal.TryParse(textBox1.Text.Trim(), out decimal depositAmount))
             {
-                MessageBox.Show("Form Can't be Empty");
+                MessageBox.Show($"Could not parse: '{textBox1.Text}'", "Debug Info"); // Temporary debug
+                return;
+            }
+            //decimal.TryParse(textBox1.Text.Trim(), out decimal depositAmount);
+
+            if (depositAmount <= 0)
+            {
+                MessageBox.Show("Deposit amount must be greater than zero.");
                 return;
             }
 
@@ -46,23 +58,49 @@ namespace FOT_BFMS
             {
                 using (SqlConnection con = SQLConnect.GetConnection())
                 {
-                    // Note: We exclude TransferID from the query because it is an IDENTITY column
-                    string query = @"INSERT INTO Deposit (Amount, DepositDate, Email) 
-                             VALUES (@Amount, @Date, @Email)";
+                    con.Open();
 
-                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    // Start a transaction to ensure both operations succeed or fail together
+                    using (SqlTransaction transaction = con.BeginTransaction())
                     {
-                        cmd.Parameters.AddWithValue("@Amount", decimal.Parse(textBox1.Text));
-                        cmd.Parameters.AddWithValue("@Date", dateTimePicker1.Value);
-                        cmd.Parameters.AddWithValue("@Email", Global.Currentuseremail);
+                        try
+                        {
+                            // STEP 1: Insert into Deposit table
+                            string insertQuery = @"INSERT INTO Deposit (Amount, DepositDate, Email) 
+                                           VALUES (@Amount, @Date, @Email)";
 
-                        con.Open();
-                        cmd.ExecuteNonQuery();
+                            using (SqlCommand cmd = new SqlCommand(insertQuery, con, transaction))
+                            {
+                                cmd.Parameters.AddWithValue("@Amount", depositAmount);
+                                cmd.Parameters.AddWithValue("@Date", dateTimePicker1.Value);
+                                cmd.Parameters.AddWithValue("@Email", Global.Currentuseremail);
+                                cmd.ExecuteNonQuery();
+                            }
+
+                            // STEP 2: Update CentralFund table (ADD to the balance)
+                            string updateQuery = @"UPDATE CentralFund
+                                           SET Amount = Amount + @Amount
+                                           WHERE AId = 1";
+
+                            using (SqlCommand updateCmd = new SqlCommand(updateQuery, con, transaction))
+                            {
+                                updateCmd.Parameters.AddWithValue("@Amount", depositAmount);
+                                updateCmd.ExecuteNonQuery();
+                            }
+
+                            // Commit both operations
+                            transaction.Commit();
+                            MessageBox.Show("Deposit successful and Central Fund updated!");
+                            this.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            // If any error occurs, revert both changes
+                            transaction.Rollback();
+                            throw new Exception("Database transaction failed. Changes rolled back. Details: " + ex.Message);
+                        }
                     }
                 }
-
-                MessageBox.Show("Deposit details submitted successfully!");
-                this.Close();
             }
             catch (Exception ex)
             {

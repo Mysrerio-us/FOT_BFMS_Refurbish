@@ -539,6 +539,7 @@
             this.button12.Text = "  Deposit Fund";
             this.button12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button13
             // 
@@ -913,6 +914,7 @@
             // 
             this.progressBar1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.progressBar1.Location = new System.Drawing.Point(14, 168);
+            this.progressBar1.Maximum = 500000;
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(339, 23);
             this.progressBar1.TabIndex = 13;
@@ -966,7 +968,6 @@
             this.chart1.Size = new System.Drawing.Size(648, 211);
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
-            this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
             // label23
             // 

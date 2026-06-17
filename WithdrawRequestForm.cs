@@ -16,6 +16,8 @@ namespace FOT_BFMS
         public WithdrawRequestForm()
         {
             InitializeComponent();
+            btnSubmit.BackColor = Color.FromArgb(0, 123, 255); // Bootstrap primary color
+            btnCancel.BackColor = Color.FromArgb(220, 53, 69); // Bootstrap danger color
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -124,6 +126,19 @@ namespace FOT_BFMS
             }
         }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            AdminDashboard ad = new AdminDashboard();
+            ad.Show();
+            this.Hide();
+        }
 
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            txtAmount.Clear();
+            txtTitle.Clear();
+            rtbReason.Clear();
+
+        }
     }
 }

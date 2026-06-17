@@ -137,7 +137,7 @@
             this.panel2.Location = new System.Drawing.Point(12, 13);
             this.panel2.Margin = new System.Windows.Forms.Padding(12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(382, 244);
+            this.panel2.Size = new System.Drawing.Size(375, 244);
             this.panel2.TabIndex = 1;
             // 
             // pictureBox4
@@ -145,7 +145,7 @@
             this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.Image = global::FOT_BFMS.Properties.Resources.banking__1_;
-            this.pictureBox4.Location = new System.Drawing.Point(264, 82);
+            this.pictureBox4.Location = new System.Drawing.Point(257, 82);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(106, 74);
@@ -159,7 +159,7 @@
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.button2.Location = new System.Drawing.Point(-123, 198);
+            this.button2.Location = new System.Drawing.Point(-130, 198);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(144, 42);
@@ -173,7 +173,7 @@
             this.label7.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Blue;
-            this.label7.Location = new System.Drawing.Point(-134, 82);
+            this.label7.Location = new System.Drawing.Point(-141, 82);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(391, 91);
@@ -187,7 +187,7 @@
             this.label9.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Blue;
-            this.label9.Location = new System.Drawing.Point(-128, 18);
+            this.label9.Location = new System.Drawing.Point(-135, 18);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(279, 25);
@@ -214,7 +214,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1284, 269);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1263, 269);
             this.tableLayoutPanel2.TabIndex = 18;
             // 
             // panel11
@@ -228,10 +228,10 @@
             this.panel11.Controls.Add(this.label16);
             this.panel11.Controls.Add(this.label17);
             this.panel11.Controls.Add(this.label19);
-            this.panel11.Location = new System.Drawing.Point(916, 13);
+            this.panel11.Location = new System.Drawing.Point(901, 13);
             this.panel11.Margin = new System.Windows.Forms.Padding(12);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(356, 244);
+            this.panel11.Size = new System.Drawing.Size(350, 244);
             this.panel11.TabIndex = 5;
             // 
             // pictureBox6
@@ -239,7 +239,7 @@
             this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox6.Image = global::FOT_BFMS.Properties.Resources.ask_question;
-            this.pictureBox6.Location = new System.Drawing.Point(232, 101);
+            this.pictureBox6.Location = new System.Drawing.Point(226, 101);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(106, 74);
@@ -253,7 +253,7 @@
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Snow;
-            this.button5.Location = new System.Drawing.Point(-115, 189);
+            this.button5.Location = new System.Drawing.Point(-121, 189);
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(454, 42);
@@ -267,7 +267,7 @@
             this.label15.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label15.Location = new System.Drawing.Point(98, 130);
+            this.label15.Location = new System.Drawing.Point(92, 130);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(170, 35);
@@ -280,7 +280,7 @@
             this.label16.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Red;
-            this.label16.Location = new System.Drawing.Point(4, 129);
+            this.label16.Location = new System.Drawing.Point(-2, 129);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(170, 25);
@@ -293,7 +293,7 @@
             this.label17.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label17.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Maroon;
-            this.label17.Location = new System.Drawing.Point(3, 62);
+            this.label17.Location = new System.Drawing.Point(-3, 62);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(360, 41);
@@ -306,7 +306,7 @@
             this.label19.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Red;
-            this.label19.Location = new System.Drawing.Point(3, 16);
+            this.label19.Location = new System.Drawing.Point(-3, 16);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(342, 224);
@@ -315,10 +315,10 @@
             // 
             // panel10
             // 
-            this.panel10.Location = new System.Drawing.Point(827, 4);
+            this.panel10.Location = new System.Drawing.Point(813, 4);
             this.panel10.Margin = new System.Windows.Forms.Padding(4);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(73, 261);
+            this.panel10.Size = new System.Drawing.Size(72, 261);
             this.panel10.TabIndex = 4;
             // 
             // panel4
@@ -330,10 +330,10 @@
             this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.label12);
             this.panel4.Controls.Add(this.label13);
-            this.panel4.Location = new System.Drawing.Point(485, 13);
+            this.panel4.Location = new System.Drawing.Point(477, 13);
             this.panel4.Margin = new System.Windows.Forms.Padding(12);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(326, 244);
+            this.panel4.Size = new System.Drawing.Size(320, 244);
             this.panel4.TabIndex = 3;
             // 
             // pictureBox5
@@ -341,7 +341,7 @@
             this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox5.Image = global::FOT_BFMS.Properties.Resources.contributors;
-            this.pictureBox5.Location = new System.Drawing.Point(202, 89);
+            this.pictureBox5.Location = new System.Drawing.Point(196, 89);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(106, 74);
@@ -355,7 +355,7 @@
             this.label11.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Green;
-            this.label11.Location = new System.Drawing.Point(-105, 206);
+            this.label11.Location = new System.Drawing.Point(-111, 206);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(279, 25);
@@ -368,7 +368,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Green;
-            this.label12.Location = new System.Drawing.Point(-114, 82);
+            this.label12.Location = new System.Drawing.Point(-120, 82);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(379, 91);
@@ -381,7 +381,7 @@
             this.label13.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Green;
-            this.label13.Location = new System.Drawing.Point(-108, 19);
+            this.label13.Location = new System.Drawing.Point(-114, 19);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(279, 25);
@@ -390,10 +390,10 @@
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(410, 4);
+            this.panel3.Location = new System.Drawing.Point(403, 4);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(59, 261);
+            this.panel3.Size = new System.Drawing.Size(58, 261);
             this.panel3.TabIndex = 2;
             // 
             // label2
@@ -428,7 +428,7 @@
             this.panel5.Location = new System.Drawing.Point(12, 12);
             this.panel5.Margin = new System.Windows.Forms.Padding(12);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(616, 134);
+            this.panel5.Size = new System.Drawing.Size(605, 134);
             this.panel5.TabIndex = 0;
             // 
             // label6
@@ -440,7 +440,7 @@
             this.label6.Location = new System.Drawing.Point(141, 85);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(471, 60);
+            this.label6.Size = new System.Drawing.Size(460, 60);
             this.label6.TabIndex = 21;
             this.label6.Text = "Transfer to branch account, then upload your payment slip for admin verification";
             // 
@@ -453,7 +453,7 @@
             this.button3.Location = new System.Drawing.Point(140, 29);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(465, 52);
+            this.button3.Size = new System.Drawing.Size(454, 52);
             this.button3.TabIndex = 20;
             this.button3.Text = "Deposit Money";
             this.button3.UseVisualStyleBackColor = true;
@@ -478,10 +478,10 @@
             this.panel6.Controls.Add(this.pictureBox8);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.panel6.Location = new System.Drawing.Point(652, 12);
+            this.panel6.Location = new System.Drawing.Point(641, 12);
             this.panel6.Margin = new System.Windows.Forms.Padding(12);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(616, 134);
+            this.panel6.Size = new System.Drawing.Size(606, 134);
             this.panel6.TabIndex = 1;
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
@@ -495,7 +495,7 @@
             this.label18.Location = new System.Drawing.Point(138, 85);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(475, 48);
+            this.label18.Size = new System.Drawing.Size(465, 48);
             this.label18.TabIndex = 22;
             this.label18.Text = "Submit a funding request for a batch activity - send directly to all admins";
             // 
@@ -508,7 +508,7 @@
             this.button4.Location = new System.Drawing.Point(138, 29);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(463, 52);
+            this.button4.Size = new System.Drawing.Size(453, 52);
             this.button4.TabIndex = 21;
             this.button4.Text = "Make a Request";
             this.button4.UseVisualStyleBackColor = true;
@@ -540,7 +540,7 @@
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 158F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1280, 158);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1259, 158);
             this.tableLayoutPanel3.TabIndex = 15;
             // 
             // label1
@@ -561,7 +561,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::FOT_BFMS.Properties.Resources.notification;
-            this.pictureBox1.Location = new System.Drawing.Point(1307, 30);
+            this.pictureBox1.Location = new System.Drawing.Point(1286, 30);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(41, 48);
@@ -575,7 +575,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(26)))), ((int)(((byte)(59)))));
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::FOT_BFMS.Properties.Resources.logout__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(1848, 26);
+            this.pictureBox2.Location = new System.Drawing.Point(1827, 26);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(49, 62);
@@ -592,7 +592,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 104);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1924, 968);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1903, 968);
             this.flowLayoutPanel1.TabIndex = 5;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
@@ -616,7 +616,7 @@
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox3.Image = global::FOT_BFMS.Properties.Resources.user;
-            this.pictureBox3.Location = new System.Drawing.Point(1394, 30);
+            this.pictureBox3.Location = new System.Drawing.Point(1373, 30);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(69, 48);
@@ -631,7 +631,7 @@
             this.label4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label4.Font = new System.Drawing.Font("Baskerville Old Face", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(1466, 35);
+            this.label4.Location = new System.Drawing.Point(1445, 35);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(170, 39);
@@ -667,7 +667,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1924, 106);
+            this.panel1.Size = new System.Drawing.Size(1903, 106);
             this.panel1.TabIndex = 4;
             // 
             // roundControl3
@@ -680,7 +680,7 @@
             this.roundControl3.BorderColor = System.Drawing.SystemColors.Control;
             this.roundControl3.BorderWidth = 1F;
             this.roundControl3.ForeColor = System.Drawing.Color.Transparent;
-            this.roundControl3.Location = new System.Drawing.Point(1371, 10);
+            this.roundControl3.Location = new System.Drawing.Point(1350, 10);
             this.roundControl3.Margin = new System.Windows.Forms.Padding(2);
             this.roundControl3.Name = "roundControl3";
             this.roundControl3.Radius = 10;
@@ -695,7 +695,7 @@
             this.roundControl1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.roundControl1.BorderColor = System.Drawing.SystemColors.Control;
             this.roundControl1.BorderWidth = 1F;
-            this.roundControl1.Location = new System.Drawing.Point(1288, 10);
+            this.roundControl1.Location = new System.Drawing.Point(1267, 10);
             this.roundControl1.Margin = new System.Windows.Forms.Padding(2);
             this.roundControl1.Name = "roundControl1";
             this.roundControl1.Radius = 10;
@@ -863,7 +863,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1945, 1055);
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.tableLayoutPanel5);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.tableLayoutPanel2);
