@@ -156,5 +156,14 @@ namespace FOT_BFMS
                 MessageBox.Show("No data found.");
             }
         }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            AdminDashboard ad = new AdminDashboard();
+            ad.Show();
+
+            this.Hide();
+
+        }
     }
 }

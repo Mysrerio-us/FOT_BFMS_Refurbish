@@ -44,19 +44,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.labelReportPreview = new System.Windows.Forms.Label();
             this.dgvReportsWithdraw = new System.Windows.Forms.DataGridView();
-            this.buttonPdf = new System.Windows.Forms.Button();
-            this.buttonBack = new System.Windows.Forms.Button();
-            this.dgvReportsDeposit = new System.Windows.Forms.DataGridView();
-            this.bFMSDataSet10 = new FOT_BFMS.BFMSDataSet10();
-            this.depositBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.depositTableAdapter = new FOT_BFMS.BFMSDataSet10TableAdapters.DepositTableAdapter();
-            this.transferIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.depositDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bFMSDataSet11 = new FOT_BFMS.BFMSDataSet11();
-            this.withdrawBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.withdrawTableAdapter = new FOT_BFMS.BFMSDataSet11TableAdapters.WithdrawTableAdapter();
             this.withdrawIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amountDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,16 +51,29 @@
             this.reasonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createdAtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.withdrawBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bFMSDataSet11 = new FOT_BFMS.BFMSDataSet11();
+            this.buttonPdf = new System.Windows.Forms.Button();
+            this.buttonBack = new System.Windows.Forms.Button();
+            this.dgvReportsDeposit = new System.Windows.Forms.DataGridView();
+            this.transferIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.depositDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.depositBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bFMSDataSet10 = new FOT_BFMS.BFMSDataSet10();
+            this.depositTableAdapter = new FOT_BFMS.BFMSDataSet10TableAdapters.DepositTableAdapter();
+            this.withdrawTableAdapter = new FOT_BFMS.BFMSDataSet11TableAdapters.WithdrawTableAdapter();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlFilter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReportsWithdraw)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReportsDeposit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bFMSDataSet10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.depositBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bFMSDataSet11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.withdrawBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bFMSDataSet11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReportsDeposit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.depositBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bFMSDataSet10)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -245,121 +245,6 @@
             this.dgvReportsWithdraw.Size = new System.Drawing.Size(1324, 268);
             this.dgvReportsWithdraw.TabIndex = 4;
             // 
-            // buttonPdf
-            // 
-            this.buttonPdf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonPdf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(26)))), ((int)(((byte)(59)))));
-            this.buttonPdf.FlatAppearance.BorderSize = 0;
-            this.buttonPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPdf.ForeColor = System.Drawing.Color.White;
-            this.buttonPdf.Location = new System.Drawing.Point(12, 669);
-            this.buttonPdf.Name = "buttonPdf";
-            this.buttonPdf.Size = new System.Drawing.Size(140, 40);
-            this.buttonPdf.TabIndex = 5;
-            this.buttonPdf.Text = "Export PDF";
-            this.buttonPdf.UseVisualStyleBackColor = false;
-            this.buttonPdf.Click += new System.EventHandler(this.buttonPdf_Click);
-            // 
-            // buttonBack
-            // 
-            this.buttonBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(26)))), ((int)(((byte)(59)))));
-            this.buttonBack.FlatAppearance.BorderSize = 0;
-            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBack.ForeColor = System.Drawing.Color.White;
-            this.buttonBack.Location = new System.Drawing.Point(1196, 669);
-            this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(140, 40);
-            this.buttonBack.TabIndex = 8;
-            this.buttonBack.Text = " Back\n";
-            this.buttonBack.UseVisualStyleBackColor = false;
-            // 
-            // dgvReportsDeposit
-            // 
-            this.dgvReportsDeposit.AllowUserToAddRows = false;
-            this.dgvReportsDeposit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvReportsDeposit.AutoGenerateColumns = false;
-            this.dgvReportsDeposit.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvReportsDeposit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReportsDeposit.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.transferIDDataGridViewTextBoxColumn,
-            this.amountDataGridViewTextBoxColumn,
-            this.depositDateDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn});
-            this.dgvReportsDeposit.DataSource = this.depositBindingSource;
-            this.dgvReportsDeposit.Location = new System.Drawing.Point(12, 376);
-            this.dgvReportsDeposit.Name = "dgvReportsDeposit";
-            this.dgvReportsDeposit.ReadOnly = true;
-            this.dgvReportsDeposit.RowHeadersVisible = false;
-            this.dgvReportsDeposit.RowHeadersWidth = 51;
-            this.dgvReportsDeposit.RowTemplate.Height = 24;
-            this.dgvReportsDeposit.Size = new System.Drawing.Size(1324, 268);
-            this.dgvReportsDeposit.TabIndex = 9;
-            // 
-            // bFMSDataSet10
-            // 
-            this.bFMSDataSet10.DataSetName = "BFMSDataSet10";
-            this.bFMSDataSet10.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // depositBindingSource
-            // 
-            this.depositBindingSource.DataMember = "Deposit";
-            this.depositBindingSource.DataSource = this.bFMSDataSet10;
-            // 
-            // depositTableAdapter
-            // 
-            this.depositTableAdapter.ClearBeforeFill = true;
-            // 
-            // transferIDDataGridViewTextBoxColumn
-            // 
-            this.transferIDDataGridViewTextBoxColumn.DataPropertyName = "TransferID";
-            this.transferIDDataGridViewTextBoxColumn.HeaderText = "TransferID";
-            this.transferIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.transferIDDataGridViewTextBoxColumn.Name = "transferIDDataGridViewTextBoxColumn";
-            this.transferIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // amountDataGridViewTextBoxColumn
-            // 
-            this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
-            this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
-            this.amountDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
-            this.amountDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // depositDateDataGridViewTextBoxColumn
-            // 
-            this.depositDateDataGridViewTextBoxColumn.DataPropertyName = "DepositDate";
-            this.depositDateDataGridViewTextBoxColumn.HeaderText = "DepositDate";
-            this.depositDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.depositDateDataGridViewTextBoxColumn.Name = "depositDateDataGridViewTextBoxColumn";
-            this.depositDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bFMSDataSet11
-            // 
-            this.bFMSDataSet11.DataSetName = "BFMSDataSet11";
-            this.bFMSDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // withdrawBindingSource
-            // 
-            this.withdrawBindingSource.DataMember = "Withdraw";
-            this.withdrawBindingSource.DataSource = this.bFMSDataSet11;
-            // 
-            // withdrawTableAdapter
-            // 
-            this.withdrawTableAdapter.ClearBeforeFill = true;
-            // 
             // withdrawIDDataGridViewTextBoxColumn
             // 
             this.withdrawIDDataGridViewTextBoxColumn.DataPropertyName = "WithdrawID";
@@ -416,6 +301,122 @@
             this.createdAtDataGridViewTextBoxColumn.Name = "createdAtDataGridViewTextBoxColumn";
             this.createdAtDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // withdrawBindingSource
+            // 
+            this.withdrawBindingSource.DataMember = "Withdraw";
+            this.withdrawBindingSource.DataSource = this.bFMSDataSet11;
+            // 
+            // bFMSDataSet11
+            // 
+            this.bFMSDataSet11.DataSetName = "BFMSDataSet11";
+            this.bFMSDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // buttonPdf
+            // 
+            this.buttonPdf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonPdf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(26)))), ((int)(((byte)(59)))));
+            this.buttonPdf.FlatAppearance.BorderSize = 0;
+            this.buttonPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPdf.ForeColor = System.Drawing.Color.White;
+            this.buttonPdf.Location = new System.Drawing.Point(12, 669);
+            this.buttonPdf.Name = "buttonPdf";
+            this.buttonPdf.Size = new System.Drawing.Size(140, 40);
+            this.buttonPdf.TabIndex = 5;
+            this.buttonPdf.Text = "Export PDF";
+            this.buttonPdf.UseVisualStyleBackColor = false;
+            this.buttonPdf.Click += new System.EventHandler(this.buttonPdf_Click);
+            // 
+            // buttonBack
+            // 
+            this.buttonBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(26)))), ((int)(((byte)(59)))));
+            this.buttonBack.FlatAppearance.BorderSize = 0;
+            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBack.ForeColor = System.Drawing.Color.White;
+            this.buttonBack.Location = new System.Drawing.Point(1196, 669);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(140, 40);
+            this.buttonBack.TabIndex = 8;
+            this.buttonBack.Text = " Back\n";
+            this.buttonBack.UseVisualStyleBackColor = false;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            // 
+            // dgvReportsDeposit
+            // 
+            this.dgvReportsDeposit.AllowUserToAddRows = false;
+            this.dgvReportsDeposit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvReportsDeposit.AutoGenerateColumns = false;
+            this.dgvReportsDeposit.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvReportsDeposit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReportsDeposit.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.transferIDDataGridViewTextBoxColumn,
+            this.amountDataGridViewTextBoxColumn,
+            this.depositDateDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn});
+            this.dgvReportsDeposit.DataSource = this.depositBindingSource;
+            this.dgvReportsDeposit.Location = new System.Drawing.Point(12, 376);
+            this.dgvReportsDeposit.Name = "dgvReportsDeposit";
+            this.dgvReportsDeposit.ReadOnly = true;
+            this.dgvReportsDeposit.RowHeadersVisible = false;
+            this.dgvReportsDeposit.RowHeadersWidth = 51;
+            this.dgvReportsDeposit.RowTemplate.Height = 24;
+            this.dgvReportsDeposit.Size = new System.Drawing.Size(1324, 268);
+            this.dgvReportsDeposit.TabIndex = 9;
+            // 
+            // transferIDDataGridViewTextBoxColumn
+            // 
+            this.transferIDDataGridViewTextBoxColumn.DataPropertyName = "TransferID";
+            this.transferIDDataGridViewTextBoxColumn.HeaderText = "TransferID";
+            this.transferIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.transferIDDataGridViewTextBoxColumn.Name = "transferIDDataGridViewTextBoxColumn";
+            this.transferIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // amountDataGridViewTextBoxColumn
+            // 
+            this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
+            this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
+            this.amountDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
+            this.amountDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // depositDateDataGridViewTextBoxColumn
+            // 
+            this.depositDateDataGridViewTextBoxColumn.DataPropertyName = "DepositDate";
+            this.depositDateDataGridViewTextBoxColumn.HeaderText = "DepositDate";
+            this.depositDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.depositDateDataGridViewTextBoxColumn.Name = "depositDateDataGridViewTextBoxColumn";
+            this.depositDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // depositBindingSource
+            // 
+            this.depositBindingSource.DataMember = "Deposit";
+            this.depositBindingSource.DataSource = this.bFMSDataSet10;
+            // 
+            // bFMSDataSet10
+            // 
+            this.bFMSDataSet10.DataSetName = "BFMSDataSet10";
+            this.bFMSDataSet10.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // depositTableAdapter
+            // 
+            this.depositTableAdapter.ClearBeforeFill = true;
+            // 
+            // withdrawTableAdapter
+            // 
+            this.withdrawTableAdapter.ClearBeforeFill = true;
+            // 
             // ReportsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -440,11 +441,11 @@
             this.pnlFilter.ResumeLayout(false);
             this.pnlFilter.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReportsWithdraw)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReportsDeposit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bFMSDataSet10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.depositBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bFMSDataSet11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.withdrawBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bFMSDataSet11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReportsDeposit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.depositBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bFMSDataSet10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
