@@ -48,6 +48,13 @@ namespace FOT_BFMS
                     DataTable dtWithdrawals = new DataTable();
                     daWithdrawals.Fill(dtWithdrawals);
                     dataGridView2.DataSource = dtWithdrawals;
+
+                    //3. Load Central Fund Balance
+                    string queryBalance = "SELECT Amount FROM CentralFund WHERE AId = 1";
+                    SqlDataAdapter daBalance = new SqlDataAdapter(queryBalance, conn);
+                    DataTable dtBalance = new DataTable();
+                    daBalance.Fill(dtBalance);
+                    label3.Text = "Rs." +dtBalance.Rows[0][0].ToString();
                 }
             }
             catch (Exception ex)

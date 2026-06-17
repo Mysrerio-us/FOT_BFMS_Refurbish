@@ -45,17 +45,13 @@
             this.withdrawDepositBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.withdrawDepositTableAdapter = new FOT_BFMS.BFMSDataSet4TableAdapters.WithdrawDepositTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.bFMSDataSet5 = new FOT_BFMS.BFMSDataSet5();
-            this.depositBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.depositTableAdapter = new FOT_BFMS.BFMSDataSet5TableAdapters.DepositTableAdapter();
             this.transferIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.depositDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bFMSDataSet6 = new FOT_BFMS.BFMSDataSet6();
-            this.withdrawBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.withdrawTableAdapter = new FOT_BFMS.BFMSDataSet6TableAdapters.WithdrawTableAdapter();
+            this.depositBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bFMSDataSet5 = new FOT_BFMS.BFMSDataSet5();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.withdrawIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amountDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,6 +59,10 @@
             this.reasonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createdAtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.withdrawBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bFMSDataSet6 = new FOT_BFMS.BFMSDataSet6();
+            this.depositTableAdapter = new FOT_BFMS.BFMSDataSet5TableAdapters.DepositTableAdapter();
+            this.withdrawTableAdapter = new FOT_BFMS.BFMSDataSet6TableAdapters.WithdrawTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -70,11 +70,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.bFMSDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.withdrawDepositBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bFMSDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.depositBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bFMSDataSet6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bFMSDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.withdrawBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bFMSDataSet6)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -158,7 +158,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(57, 59);
+            this.label3.Location = new System.Drawing.Point(36, 59);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(159, 38);
             this.label3.TabIndex = 1;
@@ -245,43 +245,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(760, 317);
             this.dataGridView1.TabIndex = 7;
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.withdrawIDDataGridViewTextBoxColumn,
-            this.titleDataGridViewTextBoxColumn,
-            this.amountDataGridViewTextBoxColumn1,
-            this.dateNeededDataGridViewTextBoxColumn,
-            this.reasonDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn1,
-            this.createdAtDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.withdrawBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(778, 330);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(636, 317);
-            this.dataGridView2.TabIndex = 8;
-            // 
-            // bFMSDataSet5
-            // 
-            this.bFMSDataSet5.DataSetName = "BFMSDataSet5";
-            this.bFMSDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // depositBindingSource
-            // 
-            this.depositBindingSource.DataMember = "Deposit";
-            this.depositBindingSource.DataSource = this.bFMSDataSet5;
-            // 
-            // depositTableAdapter
-            // 
-            this.depositTableAdapter.ClearBeforeFill = true;
-            // 
             // transferIDDataGridViewTextBoxColumn
             // 
             this.transferIDDataGridViewTextBoxColumn.DataPropertyName = "TransferID";
@@ -315,19 +278,38 @@
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             this.emailDataGridViewTextBoxColumn.Width = 125;
             // 
-            // bFMSDataSet6
+            // depositBindingSource
             // 
-            this.bFMSDataSet6.DataSetName = "BFMSDataSet6";
-            this.bFMSDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.depositBindingSource.DataMember = "Deposit";
+            this.depositBindingSource.DataSource = this.bFMSDataSet5;
             // 
-            // withdrawBindingSource
+            // bFMSDataSet5
             // 
-            this.withdrawBindingSource.DataMember = "Withdraw";
-            this.withdrawBindingSource.DataSource = this.bFMSDataSet6;
+            this.bFMSDataSet5.DataSetName = "BFMSDataSet5";
+            this.bFMSDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // withdrawTableAdapter
+            // dataGridView2
             // 
-            this.withdrawTableAdapter.ClearBeforeFill = true;
+            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.withdrawIDDataGridViewTextBoxColumn,
+            this.titleDataGridViewTextBoxColumn,
+            this.amountDataGridViewTextBoxColumn1,
+            this.dateNeededDataGridViewTextBoxColumn,
+            this.reasonDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn1,
+            this.createdAtDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.withdrawBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(778, 330);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(636, 317);
+            this.dataGridView2.TabIndex = 8;
             // 
             // withdrawIDDataGridViewTextBoxColumn
             // 
@@ -386,6 +368,24 @@
             this.createdAtDataGridViewTextBoxColumn.Name = "createdAtDataGridViewTextBoxColumn";
             this.createdAtDataGridViewTextBoxColumn.Width = 125;
             // 
+            // withdrawBindingSource
+            // 
+            this.withdrawBindingSource.DataMember = "Withdraw";
+            this.withdrawBindingSource.DataSource = this.bFMSDataSet6;
+            // 
+            // bFMSDataSet6
+            // 
+            this.bFMSDataSet6.DataSetName = "BFMSDataSet6";
+            this.bFMSDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // depositTableAdapter
+            // 
+            this.depositTableAdapter.ClearBeforeFill = true;
+            // 
+            // withdrawTableAdapter
+            // 
+            this.withdrawTableAdapter.ClearBeforeFill = true;
+            // 
             // CentralFundForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -410,11 +410,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.bFMSDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.withdrawDepositBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bFMSDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.depositBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bFMSDataSet6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bFMSDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.withdrawBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bFMSDataSet6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
