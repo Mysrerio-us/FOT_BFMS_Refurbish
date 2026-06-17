@@ -250,71 +250,71 @@ namespace FOT_BFMS
                 return;
             }
 
-            Random rnd = new Random();
-            randomNumber = (rnd.Next(100000, 999999)).ToString();
-            MessageBox.Show("OTP Sent Successfully! : "+randomNumber);
+            //Random rnd = new Random();
+            //randomNumber = (rnd.Next(100000, 999999)).ToString();
+            //MessageBox.Show("OTP Sent Successfully! : "+randomNumber);
 
             //// 3. Confirmation Dialog
-            //DialogResult dialogResult = MessageBox.Show(
-            //    $"Is this the correct phone number?\n\n{maskedTextBoxPN.Text}\n\n" +
-            //    "Click 'Yes' to send OTP, or 'No' to go back and edit.",
-            //    "Confirm Phone Number",
-            //    MessageBoxButtons.YesNo,
-            //    MessageBoxIcon.Question);
+            DialogResult dialogResult = MessageBox.Show(
+                $"Is this the correct phone number?\n\n{maskedTextBoxPN.Text}\n\n" +
+                "Click 'Yes' to send OTP, or 'No' to go back and edit.",
+                "Confirm Phone Number",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
 
-            //if (dialogResult == DialogResult.No)
-            //{
-            //    // If User wants to change it; just return to the form
-            //    maskedTextBoxPN.Focus();
-            //    return;
-            //}
-            //else
-            //{
-            //    string name = textBoxFirstName.Text;
-            //    string apiKey = "5282|cIwMQwBK7ZqJlj7qG7ToctqxLJvgDjr39LNtfZfuc2388d69";
+            if (dialogResult == DialogResult.No)
+            {
+                // If User wants to change it; just return to the form
+                maskedTextBoxPN.Focus();
+                return;
+            }
+            else
+            {
+                string name = textBoxFirstName.Text;
+                string apiKey = "5282|cIwMQwBK7ZqJlj7qG7ToctqxLJvgDjr39LNtfZfuc2388d69";
 
-            //    Random rnd = new Random();
-            //    randomNumber = (rnd.Next(100000, 999999)).ToString();
+                Random rnd = new Random();
+                randomNumber = (rnd.Next(100000, 999999)).ToString();
 
-            //    // The JSON structure required by Text.lk API
-            //    var payload = new
-            //    {
-            //        recipient = rawPhoneNumber,
-            //        sender_id = "TextLKDemo", // registered sender ID from text.lk
-            //        type = "plain",
-            //        message = $"Hey {name}, your OTP is {randomNumber}"
-            //    };
+                // The JSON structure required by Text.lk API
+                var payload = new
+                {
+                    recipient = rawPhoneNumber,
+                    sender_id = "TextLKDemo", // registered sender ID from text.lk
+                    type = "plain",
+                    message = $"Hey {name}, your OTP is {randomNumber}"
+                };
 
-            //    string json = JsonSerializer.Serialize(payload);
+                string json = JsonSerializer.Serialize(payload);
 
-            //    using (HttpClient client = new HttpClient())
-            //    {
-            //        client.DefaultRequestHeaders.Add("Authorization", $"Bearer {apiKey}");
-            //        client.DefaultRequestHeaders.Add("Accept", "application/json");
+                using (HttpClient client = new HttpClient())
+                {
+                    client.DefaultRequestHeaders.Add("Authorization", $"Bearer {apiKey}");
+                    client.DefaultRequestHeaders.Add("Accept", "application/json");
 
-            //        var content = new StringContent(json, Encoding.UTF8, "application/json");
+                    var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            //        try
-            //        {
-            //            HttpResponseMessage response = await client.PostAsync("https://app.text.lk/api/v3/sms/send", content);
-            //            string result = await response.Content.ReadAsStringAsync();
+                    try
+                    {
+                        HttpResponseMessage response = await client.PostAsync("https://app.text.lk/api/v3/sms/send", content);
+                        string result = await response.Content.ReadAsStringAsync();
 
-            //            if (response.IsSuccessStatusCode)
-            //            {
-            //                MessageBox.Show("OTP Sent Successfully!");
-            //            }
-            //            else
-            //            {
-            //                MessageBox.Show("Error: " + result);
-            //            }
-            //        }
-            //        catch (Exception ex)
-            //        {
-            //            MessageBox.Show("Exception: " + ex.Message);
-            //        }
-            //    }
-            //}
-            
+                        if (response.IsSuccessStatusCode)
+                        {
+                            MessageBox.Show("OTP Sent Successfully!");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error: " + result);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Exception: " + ex.Message);
+                    }
+                }
+            }
+
         }
 
         private void pictureBoxPNW_Click(object sender, EventArgs e)
@@ -396,6 +396,7 @@ namespace FOT_BFMS
         {
             login.Show();
             this.Hide();
+            INSERT();
         }
         private void Parameters()
         {

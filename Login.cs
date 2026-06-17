@@ -78,11 +78,6 @@ namespace FOT_BFMS
             }
         }
 
-        private void label5_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void Login_Paint(object sender, PaintEventArgs e)
         {
             using (Pen blackPen = new Pen(Color.Black, 2))
@@ -136,6 +131,11 @@ namespace FOT_BFMS
 
         private void roundControlLogin_Click(object sender, EventArgs e)
         {
+            loginButtonClickAction();
+        }
+
+        private void loginButtonClickAction()
+        {
             string username = textBoxUsername.Text.Trim();
             string password = textBoxPassword.Text.Trim();
             string email = textBoxPassword.Text.Trim();
@@ -186,9 +186,9 @@ namespace FOT_BFMS
                 {
                     AdminDashboard ad = new AdminDashboard(username);
                     ad.Show();
-                    
+
                 }
-                else if (rool.Equals("Member",StringComparison.OrdinalIgnoreCase)|| rool.Equals("User", StringComparison.OrdinalIgnoreCase))
+                else if (rool.Equals("Member", StringComparison.OrdinalIgnoreCase) || rool.Equals("User", StringComparison.OrdinalIgnoreCase))
                 {
                     MembersUI md = new MembersUI();
                     md.Show();
@@ -230,6 +230,11 @@ namespace FOT_BFMS
         private void roundControlLogin_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void labelLogin_Click(object sender, EventArgs e)
+        {
+            loginButtonClickAction();
         }
     }
 }

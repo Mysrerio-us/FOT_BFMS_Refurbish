@@ -152,7 +152,7 @@
             this.labelLogin.Size = new System.Drawing.Size(65, 24);
             this.labelLogin.TabIndex = 14;
             this.labelLogin.Text = "Log In";
-            this.labelLogin.Click += new System.EventHandler(this.label5_Click_1);
+            this.labelLogin.Click += new System.EventHandler(this.labelLogin_Click);
             // 
             // label6
             // 
