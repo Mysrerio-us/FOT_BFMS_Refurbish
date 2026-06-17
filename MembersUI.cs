@@ -175,7 +175,19 @@ namespace FOT_BFMS
 
                     dataGridView3.DataSource = dt;
 
-                    
+                    // --- UI STABILIZATION ---
+                    // 1. Force the grid to fill the container width
+                    dataGridView3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                    // 2. Prevent the rows from jumping in size when text changes
+                    dataGridView3.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+
+                    // 3. Set a consistent height for all rows
+                    dataGridView3.RowTemplate.Height = 35;
+
+                    // 4. Disable user resizing for a cleaner look
+                    dataGridView3.AllowUserToResizeRows = false;
+                    dataGridView3.AllowUserToResizeColumns = false;
                 }
             }
             catch (Exception ex)
