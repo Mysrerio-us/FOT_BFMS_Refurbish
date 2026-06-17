@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.6.2\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.5, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.5\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=10.0.0.9, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.10.0.9\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -86,6 +92,31 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BFMSDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BFMSDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BFMSDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BFMSDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BFMSDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BFMSDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BFMSDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BFMSDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BFMSDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BFMSDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BFMSDataSet14.xsd</DependentUpon>
     </Compile>
     <Compile Include="BFMSDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -289,6 +320,61 @@
     </None>
     <None Include="BFMSDataSet1.xss">
       <DependentUpon>BFMSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet10.xsc">
+      <DependentUpon>BFMSDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BFMSDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BFMSDataSet10.xss">
+      <DependentUpon>BFMSDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet11.xsc">
+      <DependentUpon>BFMSDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BFMSDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BFMSDataSet11.xss">
+      <DependentUpon>BFMSDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet12.xsc">
+      <DependentUpon>BFMSDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BFMSDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BFMSDataSet12.xss">
+      <DependentUpon>BFMSDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet13.xsc">
+      <DependentUpon>BFMSDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BFMSDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BFMSDataSet13.xss">
+      <DependentUpon>BFMSDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet14.xsc">
+      <DependentUpon>BFMSDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BFMSDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BFMSDataSet14.xss">
+      <DependentUpon>BFMSDataSet14.xsd</DependentUpon>
     </None>
     <None Include="BFMSDataSet2.xsc">
       <DependentUpon>BFMSDataSet2.xsd</DependentUpon>

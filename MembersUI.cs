@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -142,8 +143,40 @@ namespace FOT_BFMS
 
         private void MembersUI_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'bFMSDataSet14.Deposit' table. You can move, or remove it, as needed.
+            this.depositTableAdapter.Fill(this.bFMSDataSet14.Deposit);
+            // TODO: This line of code loads data into the 'bFMSDataSet13.RequestTable' table. You can move, or remove it, as needed.
+            this.requestTableTableAdapter1.Fill(this.bFMSDataSet13.RequestTable);
+            // TODO: This line of code loads data into the 'bFMSDataSet12.RequestTable' table. You can move, or remove it, as needed.
+            this.requestTableTableAdapter.Fill(this.bFMSDataSet12.RequestTable);
             LoadActiveRequestStatus();
             label4.Text = Global.Currentuseremail; // Display the current user's name
+            ShowCentralFund();
+        }
+
+        private void ShowCentralFund()
+        {
+            try
+            {
+                using (SqlConnection conn = SQLConnect.GetConnection())
+                {
+                    conn.Open();
+
+
+
+                    //3. Load Central Fund Balance
+                    string queryBalance = "SELECT Amount FROM CentralFund WHERE AId = 1";
+                    SqlDataAdapter daBalance = new SqlDataAdapter(queryBalance, conn);
+                    DataTable dtBalance = new DataTable();
+                    daBalance.Fill(dtBalance);
+                    label7.Text = "Rs." + dtBalance.Rows[0][0].ToString();
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading data: " + ex.Message);
+            }
         }
 
         private void LoadActiveRequestStatus()
@@ -152,34 +185,40 @@ namespace FOT_BFMS
             {
                 using (SqlConnection con = SQLConnect.GetConnection())
                 {
-                    // Select all three fields
-                    string query = "SELECT RequestTitle, RequestAmount, Status FROM RequestTable WHERE Email = @Email";
+                    // IMPORTANT: Add ORDER BY to get the latest entry
+                    string query = @"SELECT TOP 1 RequestTitle, RequestAmount, Status 
+                             FROM RequestTable 
+                             WHERE Email = @Email 
+                             ORDER BY DataNeeded DESC"; // Replace DateCreated with your column
 
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
                         cmd.Parameters.AddWithValue("@Email", Global.Currentuseremail);
-
                         con.Open();
+
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            if (reader.Read()) // If a request exists
+                            if (reader.Read())
                             {
-                                // Assign data to labels
-                                label17.Text = reader["RequestTitle"].ToString(); // Assume label17
-                                label15.Text = "Rs " + reader["RequestAmount"].ToString(); // Assume label15
-                                string status = reader["Status"].ToString();
+                                label17.Text = reader["RequestTitle"].ToString();
+                                label15.Text = "Rs " + reader["RequestAmount"].ToString();
 
-                                // Update status label
+                                string status = reader["Status"].ToString();
                                 button5.Text = status;
 
-                                // Set colors
-                                if (status == "Approved") button5.ForeColor = Color.Green;
-                                else if (status == "Rejected") button5.ForeColor = Color.Red;
-                                else button5.ForeColor = Color.Orange;
+                                // Improved color logic
+                                if (status.Equals("Approved", StringComparison.OrdinalIgnoreCase))
+                                    button5.ForeColor = Color.Green;
+                                else if (status.Equals("Rejected", StringComparison.OrdinalIgnoreCase))
+                                    button5.ForeColor = Color.Red;
+                                else
+                                    button5.ForeColor = Color.Orange; // Covers "Pending" or other states
                             }
                             else
                             {
-                                button5.Text = "Still Pending";
+                                // No records found for this user
+                                button5.Text = "No Requests";
+                                button5.ForeColor = Color.Gray;
                             }
                         }
                     }
