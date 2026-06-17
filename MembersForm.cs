@@ -15,7 +15,6 @@ namespace FOT_BFMS
 
     public partial class MembersForm : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=(localdb)MSSQLLocalDB;Initial Catalog=BFMS;Integrated Security=True;Encrypt=False;TrustServerCertificate=True");
         public MembersForm()
         {
             InitializeComponent();
@@ -33,11 +32,12 @@ namespace FOT_BFMS
 
         private void MembersForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'bFMSDataSet.signup' table. You can move, or remove it, as needed.
-            // this.signupTableAdapter.Fill(this.bFMSDataSet.signup);
+
+
+            label2.Text = "(Search using email or firstname)";
+            label2.ForeColor = Color.WhiteSmoke;
+
             LoadMembers();
-            textBox1.Text = "Search using email or firstname";
-            textBox1.ForeColor = Color.Gray;
 
 
         }
@@ -49,41 +49,44 @@ namespace FOT_BFMS
 
         private void button6_Click(object sender, EventArgs e)
         {
-            try
+            // Ensure an item is actually selected
+            if (comboBox1.SelectedItem != null)
             {
-                string roll = comboBox1.Text;
+                string selectedRole = comboBox1.SelectedItem.ToString();
 
-                con.Open();
-
-                string query = "";
-
-                SqlCommand cmd;
-
-                if (roll == "All")
+                // Handle the "All" case to show everything
+                if (selectedRole == "All")
                 {
-                    query = "SELECT * FROM signup";
-                    cmd = new SqlCommand(query, con);
-                }
-                else
-                {
-                    query = "SELECT * FROM signup WHERE Roll = @roll";
-                    cmd = new SqlCommand(query, con);
-                    cmd.Parameters.AddWithValue("@roll", roll);
+                    LoadMembers();
+                    return;
                 }
 
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                using (SqlConnection con = SQLConnect.GetConnection())
+                {
+                    try
+                    {
+                        // Filter by the role column
+                        string query = "SELECT userID, userName, FirstName, LastName, Email, PhoneNumber, OTP, roles, CreatedDate " +
+                                       "FROM signup WHERE roles = @role";
 
-                DataTable dt = new DataTable();
+                        SqlCommand cmd = new SqlCommand(query, con);
+                        cmd.Parameters.AddWithValue("@role", selectedRole);
 
-                da.Fill(dt);
+                        SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        sda.Fill(dt);
 
-                dgvMembers.DataSource = dt;
-
-                con.Close();
+                        dgvMembers.DataSource = dt;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error filtering data: " + ex.Message);
+                    }
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Please select a role from the list.");
             }
         }
 
@@ -93,36 +96,21 @@ namespace FOT_BFMS
         }
         private void LoadMembers()
         {
-            try
+            using (SqlConnection con = SQLConnect.GetConnection())
             {
-                con.Open();
-
-                string query = @"
-        SELECT 
-        userID,
-        Username,
-        FirstName,
-        LastName,
-        Email,
-        REPLICATE('*', LEN(Password)) AS password,
-        PhoneNumber,
-        REPLICATE('*', LEN(OTP)) AS OTP,
-        createdDate,
-        Roll
-        FROM signup";
-
-                SqlDataAdapter da = new SqlDataAdapter(query, con);
-                DataTable dt = new DataTable();
-
-                da.Fill(dt);
-
-                dgvMembers.DataSource = dt;
-
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                try
+                {
+                    con.Open();
+                    string query = "SELECT userID, userName, FirstName, LastName, Email, PhoneNumber, OTP, roles, CreatedDate FROM signup";
+                    SqlDataAdapter sda = new SqlDataAdapter(query, con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+                    dgvMembers.DataSource = dt;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading data: " + ex.Message);
+                }
             }
         }
 
@@ -142,44 +130,32 @@ namespace FOT_BFMS
             {
                 int id = Convert.ToInt32(dgvMembers.CurrentRow.Cells[0].Value);
 
-                con.Open();
-
-                SqlCommand cmd = new SqlCommand("DELETE FROM signup WHERE UserID=@id", con);
-                cmd.Parameters.AddWithValue("@id", id);
-
-                cmd.ExecuteNonQuery();
-
-                con.Close();
+                using (SqlConnection con = SQLConnect.GetConnection())
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("DELETE FROM signup WHERE UserID=@id", con);
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.ExecuteNonQuery();
+                }
 
                 MessageBox.Show("Member Deleted");
-
                 LoadMembers();
-            }
-            else
-            {
-                MessageBox.Show("Please select a member first");
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            using (SqlConnection con = SQLConnect.GetConnection())
+            {
+                SqlCommand cmd = new SqlCommand(
+                    "SELECT * FROM signup WHERE FirstName LIKE @search + '%' OR Email LIKE @search + '%'", con);
+                cmd.Parameters.AddWithValue("@search", textBox1.Text);
 
-            SqlCommand cmd = new SqlCommand(
-                "SELECT * FROM signup WHERE FirstName LIKE @search + '%' OR Email LIKE @search + '%'",
-                                        con);
-
-            cmd.Parameters.AddWithValue("@search", textBox1.Text);
-
-            SqlDataAdapter sda = new SqlDataAdapter();
-            sda.SelectCommand = cmd;
-
-            DataTable dt = new DataTable();
-            dt.Clear();
-
-            sda.Fill(dt);
-
-            dgvMembers.DataSource = dt;
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dgvMembers.DataSource = dt;
+            }
         }
     }
-    }
-
+}

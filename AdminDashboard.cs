@@ -29,6 +29,7 @@ namespace FOT_BFMS
         }
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
+            
             label7.Text = loggedUsername;
             chart1.Series.Clear();
 
@@ -54,39 +55,28 @@ namespace FOT_BFMS
             chart1.Legends.Clear();
 
 
-
-            dgvContributors.Rows.Add("1", "SK Fernando", "45000");
-            dgvContributors.Rows.Add("2", "John Perera", "38000");
-            dgvContributors.Rows.Add("3", "Alex Kumar", "30000");
-            dgvContributors.Rows.Add("4", "Nimali Silva", "25000");
-            dgvContributors.Rows.Add("5", "Dinuka Rajapaksa", "18500");
+           
 
 
-            dgvActivities.Rows.Add(
-"SK deposited Rs 5,000 to central fund",
-"Today, 10:30 AM");
 
-            dgvActivities.Rows.Add(
-            "Admin withdrew Rs 3,000 for event expenses",
-            "Today, 09:15 AM");
+            ShowCentralFund();
+            UpdateMemberCount();
+            UpdateProgressBar();
+            UpdateChart();
+            UpdateDatagridView();
+            LoadTopDepositors();
+            countPendingRequests();
+        }
 
-            dgvActivities.Rows.Add(
-            "New member John Silva joined the batch",
-            "Yesterday, 04:45 PM");
-
-            dgvActivities.Rows.Add(
-            "Nimali deposited Rs 2,500 to central fund",
-            "Yesterday, 02:20 PM");
-
-            //Central Fund Show
-
+        private void ShowCentralFund()
+        {
             try
             {
                 using (SqlConnection conn = SQLConnect.GetConnection())
                 {
                     conn.Open();
 
-                    
+
 
                     //3. Load Central Fund Balance
                     string queryBalance = "SELECT Amount FROM CentralFund WHERE AId = 1";
@@ -101,9 +91,10 @@ namespace FOT_BFMS
             {
                 MessageBox.Show("Error loading data: " + ex.Message);
             }
+        }
 
-            //
-
+        private void UpdateMemberCount()
+        {
             try
             {
                 using (SqlConnection con = SQLConnect.GetConnection())
@@ -125,9 +116,9 @@ namespace FOT_BFMS
             {
                 MessageBox.Show("Error loading member count: " + ex.Message);
             }
-
-            //Progress bar for central fund
-
+        }
+        private void UpdateProgressBar()
+        {
             try
             {
                 using (SqlConnection con = SQLConnect.GetConnection())
@@ -158,9 +149,10 @@ namespace FOT_BFMS
             {
                 MessageBox.Show("Error loading progress: " + ex.Message);
             }
+        }
 
-            //Chart1
-
+        private void UpdateChart()
+        {
             chart1.Series.Clear();
             Series sa = new Series("Balance")
             {
@@ -206,9 +198,77 @@ namespace FOT_BFMS
             {
                 MessageBox.Show("Chart Error: " + ex.Message);
             }
+        }
+        private void UpdateDatagridView()
+        {
+            try
+            {
+                using (SqlConnection con = SQLConnect.GetConnection())
+                {
+                    con.Open();
+                    string query = "SELECT RequestTitle, Status FROM RequestTable";
+                    DataTable dt = new DataTable();
+                    new SqlDataAdapter(query, con).Fill(dt);
+                    dgvActivities.DataSource = dt;
+                }
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("DataGrid Error: " + ex.Message);
+
+
+
+            }
         }
 
+        private void countPendingRequests()
+        {
+            try
+            {
+                using (SqlConnection con = SQLConnect.GetConnection())
+                {
+                    con.Open();
+                    string query = "SELECT COUNT(*) AS PendingCount FROM RequestTable\r\nWHERE Status = 'Pending';";
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        int pendingCount = (int)cmd.ExecuteScalar();
+                        label29.Text = pendingCount.ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error counting pending requests: " + ex.Message);
+            }
+        }
+
+
+        private void LoadTopDepositors()
+        {
+            try
+            {
+                using (SqlConnection con = SQLConnect.GetConnection())
+                {
+                    con.Open();
+
+                    string query = @"
+                                    SELECT TOP 5 Amount, Email
+                                    FROM Deposit
+                                    ORDER BY Amount DESC";
+
+                    SqlDataAdapter da = new SqlDataAdapter(query, con);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    dgvContributors.DataSource = dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading deposit data: " + ex.Message);
+            }
+        }
         private void button3_Click(object sender, EventArgs e)
         {
             MembersForm frm = new MembersForm();

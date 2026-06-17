@@ -112,6 +112,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BFMSDataSet6.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BFMSDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BFMSDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BFMSDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BFMSDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BFMSDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BFMSDataSet9.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CentralFundForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -329,6 +344,39 @@
     </None>
     <None Include="BFMSDataSet6.xss">
       <DependentUpon>BFMSDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet7.xsc">
+      <DependentUpon>BFMSDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BFMSDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BFMSDataSet7.xss">
+      <DependentUpon>BFMSDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet8.xsc">
+      <DependentUpon>BFMSDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BFMSDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BFMSDataSet8.xss">
+      <DependentUpon>BFMSDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet9.xsc">
+      <DependentUpon>BFMSDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="BFMSDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BFMSDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BFMSDataSet9.xss">
+      <DependentUpon>BFMSDataSet9.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

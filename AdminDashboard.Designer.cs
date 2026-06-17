@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlHelp = new System.Windows.Forms.Panel();
@@ -74,15 +75,10 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.dgvContributors = new System.Windows.Forms.DataGridView();
-            this.colRank = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlContributors = new System.Windows.Forms.Panel();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.dgvActivities = new System.Windows.Forms.DataGridView();
-            this.colActivity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlActivities = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.label32 = new System.Windows.Forms.Label();
@@ -118,6 +114,16 @@
             this.label11 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tblCards = new System.Windows.Forms.TableLayoutPanel();
+            this.bFMSDataSet7 = new FOT_BFMS.BFMSDataSet7();
+            this.requestTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.requestTableTableAdapter = new FOT_BFMS.BFMSDataSet7TableAdapters.RequestTableTableAdapter();
+            this.requestTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bFMSDataSet8 = new FOT_BFMS.BFMSDataSet8();
+            this.depositBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.depositTableAdapter = new FOT_BFMS.BFMSDataSet8TableAdapters.DepositTableAdapter();
+            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlHelp.SuspendLayout();
@@ -146,6 +152,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel3.SuspendLayout();
             this.tblCards.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bFMSDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.requestTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bFMSDataSet8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.depositBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -726,12 +736,13 @@
             // 
             this.dgvContributors.AllowUserToAddRows = false;
             this.dgvContributors.AllowUserToDeleteRows = false;
+            this.dgvContributors.AutoGenerateColumns = false;
             this.dgvContributors.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvContributors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvContributors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colRank,
-            this.colName,
-            this.colAmount});
+            this.amountDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn});
+            this.dgvContributors.DataSource = this.depositBindingSource;
             this.dgvContributors.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvContributors.Location = new System.Drawing.Point(0, 0);
             this.dgvContributors.Name = "dgvContributors";
@@ -741,27 +752,6 @@
             this.dgvContributors.RowTemplate.Height = 24;
             this.dgvContributors.Size = new System.Drawing.Size(305, 213);
             this.dgvContributors.TabIndex = 5;
-            // 
-            // colRank
-            // 
-            this.colRank.HeaderText = "Rank";
-            this.colRank.MinimumWidth = 6;
-            this.colRank.Name = "colRank";
-            this.colRank.ReadOnly = true;
-            // 
-            // colName
-            // 
-            this.colName.HeaderText = "Name";
-            this.colName.MinimumWidth = 6;
-            this.colName.Name = "colName";
-            this.colName.ReadOnly = true;
-            // 
-            // colAmount
-            // 
-            this.colAmount.HeaderText = "Amount";
-            this.colAmount.MinimumWidth = 6;
-            this.colAmount.Name = "colAmount";
-            this.colAmount.ReadOnly = true;
             // 
             // pnlContributors
             // 
@@ -804,11 +794,13 @@
             // 
             this.dgvActivities.AllowUserToAddRows = false;
             this.dgvActivities.AllowUserToDeleteRows = false;
+            this.dgvActivities.AutoGenerateColumns = false;
             this.dgvActivities.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvActivities.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvActivities.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colActivity,
-            this.colDate});
+            this.requestTitleDataGridViewTextBoxColumn,
+            this.statusDataGridViewTextBoxColumn});
+            this.dgvActivities.DataSource = this.requestTableBindingSource;
             this.dgvActivities.Location = new System.Drawing.Point(3, 43);
             this.dgvActivities.MultiSelect = false;
             this.dgvActivities.Name = "dgvActivities";
@@ -819,20 +811,6 @@
             this.dgvActivities.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvActivities.Size = new System.Drawing.Size(342, 234);
             this.dgvActivities.TabIndex = 6;
-            // 
-            // colActivity
-            // 
-            this.colActivity.HeaderText = "Activity";
-            this.colActivity.MinimumWidth = 6;
-            this.colActivity.Name = "colActivity";
-            this.colActivity.ReadOnly = true;
-            // 
-            // colDate
-            // 
-            this.colDate.HeaderText = " Date";
-            this.colDate.MinimumWidth = 6;
-            this.colDate.Name = "colDate";
-            this.colDate.ReadOnly = true;
             // 
             // pnlActivities
             // 
@@ -950,21 +928,21 @@
             // chart1
             // 
             this.chart1.BorderlineWidth = 3;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            chartArea6.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea6);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            legend6.Name = "Legend1";
+            this.chart1.Legends.Add(legend6);
             this.chart1.Location = new System.Drawing.Point(0, 0);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.MarkerSize = 8;
-            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series6.Legend = "Legend1";
+            series6.MarkerSize = 8;
+            series6.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series6.Name = "Series1";
+            this.chart1.Series.Add(series6);
             this.chart1.Size = new System.Drawing.Size(648, 211);
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
@@ -1241,6 +1219,66 @@
             this.tblCards.Size = new System.Drawing.Size(1108, 150);
             this.tblCards.TabIndex = 12;
             // 
+            // bFMSDataSet7
+            // 
+            this.bFMSDataSet7.DataSetName = "BFMSDataSet7";
+            this.bFMSDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // requestTableBindingSource
+            // 
+            this.requestTableBindingSource.DataMember = "RequestTable";
+            this.requestTableBindingSource.DataSource = this.bFMSDataSet7;
+            // 
+            // requestTableTableAdapter
+            // 
+            this.requestTableTableAdapter.ClearBeforeFill = true;
+            // 
+            // requestTitleDataGridViewTextBoxColumn
+            // 
+            this.requestTitleDataGridViewTextBoxColumn.DataPropertyName = "RequestTitle";
+            this.requestTitleDataGridViewTextBoxColumn.HeaderText = "RequestTitle";
+            this.requestTitleDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.requestTitleDataGridViewTextBoxColumn.Name = "requestTitleDataGridViewTextBoxColumn";
+            this.requestTitleDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bFMSDataSet8
+            // 
+            this.bFMSDataSet8.DataSetName = "BFMSDataSet8";
+            this.bFMSDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // depositBindingSource
+            // 
+            this.depositBindingSource.DataMember = "Deposit";
+            this.depositBindingSource.DataSource = this.bFMSDataSet8;
+            // 
+            // depositTableAdapter
+            // 
+            this.depositTableAdapter.ClearBeforeFill = true;
+            // 
+            // amountDataGridViewTextBoxColumn
+            // 
+            this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
+            this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
+            this.amountDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
+            this.amountDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -1302,6 +1340,10 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.tblCards.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bFMSDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.requestTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bFMSDataSet8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.depositBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1350,15 +1392,10 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.DataGridView dgvContributors;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colRank;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colAmount;
         private System.Windows.Forms.Panel pnlContributors;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.DataGridView dgvActivities;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colActivity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDate;
         private System.Windows.Forms.Panel pnlActivities;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label label32;
@@ -1394,5 +1431,15 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TableLayoutPanel tblCards;
+        private BFMSDataSet7 bFMSDataSet7;
+        private System.Windows.Forms.BindingSource requestTableBindingSource;
+        private BFMSDataSet7TableAdapters.RequestTableTableAdapter requestTableTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn requestTitleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private BFMSDataSet8 bFMSDataSet8;
+        private System.Windows.Forms.BindingSource depositBindingSource;
+        private BFMSDataSet8TableAdapters.DepositTableAdapter depositTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
     }
 }

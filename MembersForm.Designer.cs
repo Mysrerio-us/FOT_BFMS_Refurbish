@@ -31,39 +31,45 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MembersForm));
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvMembers = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.bFMSDataSet = new FOT_BFMS.BFMSDataSet();
-            this.signupBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.signupTableAdapter = new FOT_BFMS.BFMSDataSetTableAdapters.signupTableAdapter();
-            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.oTPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rolesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createdDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rollDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.signupBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bFMSDataSet9 = new FOT_BFMS.BFMSDataSet9();
+            this.signupBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bFMSDataSet = new FOT_BFMS.BFMSDataSet();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.signupTableAdapter = new FOT_BFMS.BFMSDataSetTableAdapters.signupTableAdapter();
+            this.signupTableAdapter1 = new FOT_BFMS.BFMSDataSet9TableAdapters.signupTableAdapter();
+            this.label2 = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMembers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bFMSDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.signupBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bFMSDataSet9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.signupBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bFMSDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(26)))), ((int)(((byte)(59)))));
+            this.pnlHeader.Controls.Add(this.label2);
             this.pnlHeader.Controls.Add(this.comboBox1);
             this.pnlHeader.Controls.Add(this.button6);
             this.pnlHeader.Controls.Add(this.pictureBox1);
@@ -75,6 +81,32 @@
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1348, 191);
             this.pnlHeader.TabIndex = 0;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "All",
+            "Admin",
+            "Member",
+            "User"});
+            this.comboBox1.Location = new System.Drawing.Point(779, 146);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(245, 24);
+            this.comboBox1.TabIndex = 5;
+            this.comboBox1.Text = "All";
+            // 
+            // button6
+            // 
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(1109, 130);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(145, 43);
+            this.button6.TabIndex = 4;
+            this.button6.Text = "Role";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // pictureBox1
             // 
@@ -132,17 +164,16 @@
             this.dgvMembers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMembers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.usernameDataGridViewTextBoxColumn,
+            this.userIDDataGridViewTextBoxColumn,
+            this.userNameDataGridViewTextBoxColumn,
             this.firstNameDataGridViewTextBoxColumn,
             this.lastNameDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
-            this.passwordDataGridViewTextBoxColumn,
             this.phoneNumberDataGridViewTextBoxColumn,
             this.oTPDataGridViewTextBoxColumn,
-            this.createdDateDataGridViewTextBoxColumn,
-            this.userIDDataGridViewTextBoxColumn,
-            this.rollDataGridViewTextBoxColumn});
-            this.dgvMembers.DataSource = this.signupBindingSource;
+            this.rolesDataGridViewTextBoxColumn,
+            this.createdDateDataGridViewTextBoxColumn});
+            this.dgvMembers.DataSource = this.signupBindingSource1;
             this.dgvMembers.Location = new System.Drawing.Point(12, 222);
             this.dgvMembers.Name = "dgvMembers";
             this.dgvMembers.RowHeadersVisible = false;
@@ -151,6 +182,90 @@
             this.dgvMembers.Size = new System.Drawing.Size(1306, 403);
             this.dgvMembers.TabIndex = 1;
             this.dgvMembers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMembers_CellContentClick);
+            // 
+            // userIDDataGridViewTextBoxColumn
+            // 
+            this.userIDDataGridViewTextBoxColumn.DataPropertyName = "userID";
+            this.userIDDataGridViewTextBoxColumn.HeaderText = "userID";
+            this.userIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
+            this.userIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // userNameDataGridViewTextBoxColumn
+            // 
+            this.userNameDataGridViewTextBoxColumn.DataPropertyName = "userName";
+            this.userNameDataGridViewTextBoxColumn.HeaderText = "userName";
+            this.userNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.userNameDataGridViewTextBoxColumn.Name = "userNameDataGridViewTextBoxColumn";
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // phoneNumberDataGridViewTextBoxColumn
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            // 
+            // oTPDataGridViewTextBoxColumn
+            // 
+            this.oTPDataGridViewTextBoxColumn.DataPropertyName = "OTP";
+            this.oTPDataGridViewTextBoxColumn.HeaderText = "OTP";
+            this.oTPDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.oTPDataGridViewTextBoxColumn.Name = "oTPDataGridViewTextBoxColumn";
+            // 
+            // rolesDataGridViewTextBoxColumn
+            // 
+            this.rolesDataGridViewTextBoxColumn.DataPropertyName = "roles";
+            this.rolesDataGridViewTextBoxColumn.HeaderText = "roles";
+            this.rolesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.rolesDataGridViewTextBoxColumn.Name = "rolesDataGridViewTextBoxColumn";
+            // 
+            // createdDateDataGridViewTextBoxColumn
+            // 
+            this.createdDateDataGridViewTextBoxColumn.DataPropertyName = "CreatedDate";
+            this.createdDateDataGridViewTextBoxColumn.HeaderText = "CreatedDate";
+            this.createdDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.createdDateDataGridViewTextBoxColumn.Name = "createdDateDataGridViewTextBoxColumn";
+            // 
+            // signupBindingSource1
+            // 
+            this.signupBindingSource1.DataMember = "signup";
+            this.signupBindingSource1.DataSource = this.bFMSDataSet9;
+            // 
+            // bFMSDataSet9
+            // 
+            this.bFMSDataSet9.DataSetName = "BFMSDataSet9";
+            this.bFMSDataSet9.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // signupBindingSource
+            // 
+            this.signupBindingSource.DataMember = "signup";
+            this.signupBindingSource.DataSource = this.bFMSDataSet;
+            // 
+            // bFMSDataSet
+            // 
+            this.bFMSDataSet.DataSetName = "BFMSDataSet";
+            this.bFMSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button2
             // 
@@ -200,115 +315,23 @@
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button6
-            // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(1109, 130);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(145, 43);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Rool";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "All",
-            "Admin",
-            "Member "});
-            this.comboBox1.Location = new System.Drawing.Point(779, 146);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(245, 24);
-            this.comboBox1.TabIndex = 5;
-            this.comboBox1.Text = "All";
-            // 
-            // bFMSDataSet
-            // 
-            this.bFMSDataSet.DataSetName = "BFMSDataSet";
-            this.bFMSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // signupBindingSource
-            // 
-            this.signupBindingSource.DataMember = "signup";
-            this.signupBindingSource.DataSource = this.bFMSDataSet;
-            // 
             // signupTableAdapter
             // 
             this.signupTableAdapter.ClearBeforeFill = true;
             // 
-            // usernameDataGridViewTextBoxColumn
+            // signupTableAdapter1
             // 
-            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
-            this.usernameDataGridViewTextBoxColumn.HeaderText = "Username";
-            this.usernameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            this.signupTableAdapter1.ClearBeforeFill = true;
             // 
-            // firstNameDataGridViewTextBoxColumn
+            // label2
             // 
-            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            this.passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            // 
-            // phoneNumberDataGridViewTextBoxColumn
-            // 
-            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
-            // 
-            // oTPDataGridViewTextBoxColumn
-            // 
-            this.oTPDataGridViewTextBoxColumn.DataPropertyName = "OTP";
-            this.oTPDataGridViewTextBoxColumn.HeaderText = "OTP";
-            this.oTPDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.oTPDataGridViewTextBoxColumn.Name = "oTPDataGridViewTextBoxColumn";
-            // 
-            // createdDateDataGridViewTextBoxColumn
-            // 
-            this.createdDateDataGridViewTextBoxColumn.DataPropertyName = "CreatedDate";
-            this.createdDateDataGridViewTextBoxColumn.HeaderText = "CreatedDate";
-            this.createdDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.createdDateDataGridViewTextBoxColumn.Name = "createdDateDataGridViewTextBoxColumn";
-            // 
-            // userIDDataGridViewTextBoxColumn
-            // 
-            this.userIDDataGridViewTextBoxColumn.DataPropertyName = "UserID";
-            this.userIDDataGridViewTextBoxColumn.HeaderText = "UserID";
-            this.userIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
-            this.userIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rollDataGridViewTextBoxColumn
-            // 
-            this.rollDataGridViewTextBoxColumn.DataPropertyName = "Roll";
-            this.rollDataGridViewTextBoxColumn.HeaderText = "Roll";
-            this.rollDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.rollDataGridViewTextBoxColumn.Name = "rollDataGridViewTextBoxColumn";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(317, 124);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 22);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "label2";
             // 
             // MembersForm
             // 
@@ -329,8 +352,10 @@
             this.pnlHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMembers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bFMSDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.signupBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bFMSDataSet9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.signupBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bFMSDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -351,15 +376,18 @@
         private BFMSDataSet bFMSDataSet;
         private System.Windows.Forms.BindingSource signupBindingSource;
         private BFMSDataSetTableAdapters.signupTableAdapter signupTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
+        private BFMSDataSet9 bFMSDataSet9;
+        private System.Windows.Forms.BindingSource signupBindingSource1;
+        private BFMSDataSet9TableAdapters.signupTableAdapter signupTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn oTPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rolesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn createdDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rollDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label2;
     }
 }
