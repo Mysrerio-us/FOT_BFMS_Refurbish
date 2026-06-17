@@ -38,7 +38,7 @@ namespace FOT_BFMS
             // Basic validation
             if (string.IsNullOrWhiteSpace(textBox1.Text))
             {
-                MessageBox.Show("Please enter both Amount and Transfer ID.");
+                MessageBox.Show("Form Can't be Empty");
                 return;
             }
 

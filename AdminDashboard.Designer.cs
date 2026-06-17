@@ -519,7 +519,7 @@
             this.label5.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(3, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(333, 31);
+            this.label5.Size = new System.Drawing.Size(335, 31);
             this.label5.TabIndex = 0;
             this.label5.Text = " ☰  Good Morning, Admin 👋";
             // 
@@ -555,6 +555,7 @@
             this.button13.Text = "  Withdraw Fund";
             this.button13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button14
             // 
