@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MembersForm));
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button6 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -56,7 +57,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.signupTableAdapter = new FOT_BFMS.BFMSDataSetTableAdapters.signupTableAdapter();
             this.signupTableAdapter1 = new FOT_BFMS.BFMSDataSet9TableAdapters.signupTableAdapter();
-            this.label2 = new System.Windows.Forms.Label();
+            this.buttonMember = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMembers)).BeginInit();
@@ -81,6 +82,16 @@
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1348, 191);
             this.pnlHeader.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(317, 124);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 22);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "label2";
             // 
             // comboBox1
             // 
@@ -281,7 +292,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "Add Member";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.button4_Click);
             // 
             // button4
             // 
@@ -291,7 +302,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(589, 653);
+            this.button4.Location = new System.Drawing.Point(430, 653);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(140, 40);
             this.button4.TabIndex = 4;
@@ -323,15 +334,21 @@
             // 
             this.signupTableAdapter1.ClearBeforeFill = true;
             // 
-            // label2
+            // buttonMember
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(317, 124);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 22);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "label2";
+            this.buttonMember.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonMember.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(26)))), ((int)(((byte)(59)))));
+            this.buttonMember.FlatAppearance.BorderSize = 0;
+            this.buttonMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMember.ForeColor = System.Drawing.Color.White;
+            this.buttonMember.Location = new System.Drawing.Point(826, 653);
+            this.buttonMember.Name = "buttonMember";
+            this.buttonMember.Size = new System.Drawing.Size(140, 40);
+            this.buttonMember.TabIndex = 6;
+            this.buttonMember.Text = "Member";
+            this.buttonMember.UseVisualStyleBackColor = false;
+            this.buttonMember.Click += new System.EventHandler(this.buttonMember_Click);
             // 
             // MembersForm
             // 
@@ -339,6 +356,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1348, 721);
+            this.Controls.Add(this.buttonMember);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
@@ -389,5 +407,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn rolesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn createdDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonMember;
     }
 }

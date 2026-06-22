@@ -96,9 +96,9 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label3.Location = new System.Drawing.Point(687, 208);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 18);
+            this.label3.Size = new System.Drawing.Size(153, 18);
             this.label3.TabIndex = 6;
-            this.label3.Text = "USERNAME";
+            this.label3.Text = "USERNAME / E-MAIL";
             // 
             // label4
             // 

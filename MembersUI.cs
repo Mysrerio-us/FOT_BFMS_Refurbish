@@ -28,7 +28,8 @@ namespace FOT_BFMS
         {
 
             LoadActiveRequestStatus();
-            label4.Text = Global.Currentuseremail; // Display the current user's name
+            string email = Global.Currentuseremail;
+            label4.Text = email.Contains("@") ? email.Substring(0, email.IndexOf("@")) : email;
             ShowCentralFund();
             UpdateDatagridView();
             LoadTopDepositors();
@@ -295,8 +296,6 @@ namespace FOT_BFMS
         {
 
         }
-
-
     }
 
 }

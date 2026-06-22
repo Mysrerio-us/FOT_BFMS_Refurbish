@@ -157,5 +157,44 @@ namespace FOT_BFMS
                 dgvMembers.DataSource = dt;
             }
         }
+
+        private void buttonMember_Click(object sender, EventArgs e)
+        {
+            // Ensure a valid row is selected
+            if (dgvMembers.CurrentRow != null && !dgvMembers.CurrentRow.IsNewRow)
+            {
+                string currentRole = dgvMembers.CurrentRow.Cells[8].Value?.ToString();
+                int id = Convert.ToInt32(dgvMembers.CurrentRow.Cells[0].Value);
+
+                // Prevent downgrading if already a Member
+                if (currentRole == "User")
+                {
+                    MessageBox.Show("This user is already a member.");
+                    return;
+                }
+
+                // Confirm action
+                DialogResult result = MessageBox.Show("Are you sure you want to change this role to 'User'?",
+                                                    "Confirm Change", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    using (SqlConnection con = SQLConnect.GetConnection())
+                    {
+                        con.Open();
+                        SqlCommand cmd = new SqlCommand("UPDATE signup SET roles = 'User' WHERE UserID=@id", con);
+                        cmd.Parameters.AddWithValue("@id", id);
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    MessageBox.Show("Member Role Updated Successfully.");
+                    LoadMembers();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a valid user row.");
+            }
+        }
     }
 }
